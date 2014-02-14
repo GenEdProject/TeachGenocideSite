@@ -2,15 +2,20 @@ function on_load()
 {
     $('.mainMenuItem').click(function()
     {
-        var currMMI = $(this)
-        var currSML =  $(get_submenuList_class(currMMI))
+        var currMMI = $(this);
+        var currSML =  $(get_submenuList_class(currMMI));
 
         if(currMMI.hasClass("clicked"))
         {
             currMMI.removeClass("clicked");
-            currSML.slideUp(300);
-            currMMI.find('.mainlinebox').toggle();
-            currMMI.find('.mainopenlinebox').toggle();    
+
+
+            if(currSML.length)
+            {
+                currSML.slideUp(300);
+                currMMI.find('.mainlinebox').toggle();
+                currMMI.find('.mainopenlinebox').toggle();    
+            }
         }   
         else
         {
@@ -21,16 +26,24 @@ function on_load()
                 {
                     var currSML = $(get_submenuList_class(currMMI))
                     currMMI.removeClass("clicked");
-                    currSML.slideUp(300);
-                    currMMI.find('.mainlinebox').toggle();
-                    currMMI.find('.mainopenlinebox').toggle();  
+
+                    if(currSML.length)
+                    {
+                        currSML.slideUp(300);
+                        currMMI.find('.mainlinebox').toggle();
+                        currMMI.find('.mainopenlinebox').toggle();                        
+                    }
                 }
             });
 
             currMMI.addClass("clicked");
-            currMMI.find('.mainlinebox').toggle();
-            currMMI.find('.mainopenlinebox').toggle();
-            currSML.slideDown(300);
+
+            if(currSML.length)
+            {
+                currMMI.find('.mainlinebox').toggle();
+                currMMI.find('.mainopenlinebox').toggle();
+                currSML.slideDown(300);
+            }
         }
 
     });
