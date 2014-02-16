@@ -18,7 +18,7 @@ function on_load()
                 currMLB.show();
                 currMOLB.hide();
             }
-        }   
+        }
         else
         {
             $('.mainMenuItem').each(function()
