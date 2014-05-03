@@ -1,35 +1,36 @@
-function getSubmenuListClass(mainMenuItemClass)
-{
-  return $('.' + 'sub' + $(mainMenuItemClass).attr("class").split(/\s+/)[1]);
-}
-
-function hlTextToggle(highlight, textSpan)
-{
-  if(highlight)
+( function($) {
+  $ = jQuery;
+  function getSubmenuListClass(mainMenuItemClass)
   {
-    textSpan.css("font-weight", "700");
+    return $('.' + 'sub' + $(mainMenuItemClass).attr("class").split(/\s+/)[1]);
   }
-  else
+
+  function hlTextToggle(highlight, textSpan)
   {
-    textSpan.css("font-weight", "500");
+    if(highlight)
+    {
+      textSpan.css("font-weight", "700");
+    }
+    else
+    {
+      textSpan.css("font-weight", "500");
+    }
   }
-}
 
-function getMaxMenuItemCount()
-{
-  var count = 0;
-  var subMenuLengths = [];
-  $('.mainMenuItem').each(function()
+  function getMaxMenuItemCount()
   {
-    count++;
-    subMenuLengths.push(getSubmenuListClass($(this)).children().length);
-  });
-  count += Math.max.apply(Math, subMenuLenghts);
-  return count;
-}
+    var count = 0;
+    var subMenuLengths = [];
+    $('.mainMenuItem').each(function()
+    {
+      count++;
+      subMenuLengths.push(getSubmenuListClass($(this)).children().length);
+    });
+    count += Math.max.apply(Math, subMenuLengths);
+    return count;
+  }
 
-function on_load()
-{
+  // ---------------------------------------------------------------------
   var menuItemHeight = $('.mainMenuList').height()/getMaxMenuItemCount();
   $('.mainMenuItem').height(menuItemHeight);
   $('.subMenuItem').height(menuItemHeight);
@@ -144,4 +145,4 @@ function on_load()
       $('#selector').animate({ top: topL}, 200);
     }
   });
-}
+})();

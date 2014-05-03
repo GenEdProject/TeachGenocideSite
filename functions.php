@@ -86,7 +86,7 @@ add_action( 'widgets_init', 'teachgen_widgets_init' );
 function teachgen_scripts() {
   wp_enqueue_style( 'teachgen-style', get_stylesheet_uri() );
 
-  wp_enqueue_script( 'teachgen-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+  wp_enqueue_script( 'teachgen-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
 
   wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array(), '20140409', true );
 
