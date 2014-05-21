@@ -54,6 +54,36 @@ function teachgen_setup() {
     'default-image' => '',
   ) ) );
 
+  register_post_type('books',
+    array(
+      'labels' => array('name' => 'Books'),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+  register_post_type('videos',
+    array(
+      'labels' => array('name' => 'Videos'),
+      'public' => true,
+      'has_archive' => true,
+      'taxonomy' => 'videos',
+    )
+  );
+  register_post_type('teaching_guides',
+    array(
+      'labels' => array('name' => 'Teaching Guides'),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+  register_post_type('websites',
+    array(
+      'labels' => array('name' => 'Websites'),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
   // Enable support for HTML5 markup.
   add_theme_support( 'html5', array(
     'comment-list',

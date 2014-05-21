@@ -405,9 +405,10 @@ header {
 }
 .main-navigation ul li:hover > ul {
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
+.main-navigation .current_page_item a {
   font-weight: 700;
+}
+.main-navigation .current-menu-item a {
 }
 li.current_page_parent ul, li.current_page_item ul {
   display: block;
