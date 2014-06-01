@@ -66,6 +66,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 html {
+  height: 100%;
   font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
   overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
   -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
@@ -346,20 +347,19 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
-}
-a:visited {
-  color: purple;
-}
-a:hover,
-a:focus,
-a:active {
-  color: midnightblue;
+  color: #444;
 }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+#logo {
+  margin-top: 20px;
+  margin-left: 75px;
+  width: 150px;
+  height: 150px;
+}
+
 header {
   height: 100%;
   position: fixed;
@@ -406,9 +406,9 @@ header {
 .main-navigation ul li:hover > ul {
 }
 .main-navigation .current_page_item a {
-  font-weight: 700;
 }
 .main-navigation .current-menu-item a {
+  font-weight: bold;
 }
 li.current_page_parent ul, li.current_page_item ul {
   display: block;
@@ -554,8 +554,7 @@ li.current_page_parent ul, li.current_page_item ul {
 --------------------------------------------------------------*/
 #content {
   margin-left: 300px;
-  background-color: rgb(48, 47, 58);
-  padding: 10px;
+  padding-bottom:10px;
 }
 .entry-header{
   display: none;
@@ -583,16 +582,24 @@ li.current_page_parent ul, li.current_page_item ul {
   margin: 0 0 1.5em;
 }
 
+.article_container {
+  background-color: #ccc;
+  margin: 10px;
+  padding: 10px;
+}
 /* Custom Post Styles */
 section.video {
   background-color: #ccc;
   width: 500px;
   margin-left: 10px;
   margin-top: 10px;
+  border-radius: 4px;
 }
 .video .title_container {
   text-align: center;
-  background-color: gold;
+  background-color: #f1da0e;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
 .video .content_container {
   padding: 10px;
@@ -602,16 +609,25 @@ section.video {
   width: 200px;
   height: 200px;
   margin-right: 10px;
+  border-radius: 3px;
 }
 .arrow_down {
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
-  border-top: 9px solid gold;
+  border-top: 9px solid #f1da0e;
   position: relative;
   left: 50%;
   margin-left: -9px;
+}
+
+.arrow_left {
+  width: 0;
+  height: 0;
+  border-right: 9px solid black;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
 }
 
 .column {

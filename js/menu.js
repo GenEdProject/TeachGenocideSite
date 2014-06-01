@@ -2,7 +2,7 @@
   $ = jQuery;
   function getSubmenuListClass(mainMenuItemClass)
   {
-    return $('.' + 'sub' + $(mainMenuItemClass).attr("class").split(/\s+/)[1]);
+    return $('.sub' + $(mainMenuItemClass).attr("class").split(/\s+/)[1]);
   }
 
   function hlTextToggle(highlight, textSpan)
@@ -31,10 +31,29 @@
   }
 
   // ---------------------------------------------------------------------
-  var menuItemHeight = $('.mainMenuList').height()/getMaxMenuItemCount();
+  var menuItemHeight = $('.mainMenuList').height() / getMaxMenuItemCount();
   $('.mainMenuItem').height(menuItemHeight);
   $('.subMenuItem').height(menuItemHeight);
   selectorIndent = (menuItemHeight-10)/4; // 10 is the height of the arrow
+
+  function parse_and_reroute(url, query, reroute_path) {
+    if (!url) return;
+    var i = url.indexOf(query);
+    if (i !== -1) {
+      window.location.href = url.substr(0, i) + reroute_path;
+      return true;
+    }
+    return false;
+  }
+
+  $('a').click(function(e) {
+    var t = e.target;
+    var path = t.getAttribute('href');
+    var rerouted = false;
+    rerouted |= parse_and_reroute(path, 'resources', 'videos-and-books');
+    rerouted |= parse_and_reroute(path, 'background', 'denial');
+    return !rerouted;
+  });
 
   $('.mainMenuItem').click(function()
   {
