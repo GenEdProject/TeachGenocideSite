@@ -363,6 +363,7 @@ a {
 header {
   height: 100%;
   position: fixed;
+  overflow: auto;
   background-color: #f1da0e;
   width: 300px;
 }
@@ -563,7 +564,8 @@ li.current_page_parent ul, li.current_page_item ul {
 #content {
   background-color: #fefefe;
   margin-left: 300px;
-  padding-bottom:10px;
+  padding-left: 7px;
+  padding-bottom: 10px;
 }
 .entry-header{
   display: none;
@@ -601,8 +603,8 @@ section.video {
   background-color: #eee;
   border: 1px solid #ccc;
   width: 500px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 5px;
+  margin-top: 12px;
   border-radius: 4px;
 }
 .video .title_container {
@@ -617,8 +619,6 @@ section.video {
 }
 .video img{
   float: left;
-  width: 200px;
-  height: 200px;
   margin-right: 10px;
   border-radius: 3px;
 }
