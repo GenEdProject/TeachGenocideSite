@@ -66,6 +66,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 html {
+  background-color: #fefefe;
   height: 100%;
   font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
   overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
@@ -80,7 +81,7 @@ html {
   box-sizing:         border-box;
 }
 body {
-  background: #fff;
+  background-color: #fff;
 }
 article,
 aside,
@@ -156,7 +157,6 @@ address {
   margin: 0 0 1.5em;
 }
 pre {
-  background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -202,7 +202,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ccc;
+  background-color: #fff;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -371,6 +371,7 @@ header {
   display: block;
   float: left;
   width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 .main-navigation ul {
   list-style: none;
@@ -385,7 +386,6 @@ header {
   text-decoration: none;
 }
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
 }
 .main-navigation ul ul ul {
@@ -409,6 +409,14 @@ header {
 }
 .main-navigation .current-menu-item a {
   font-weight: bold;
+}
+.current-menu-item:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid white;
 }
 li.current_page_parent ul, li.current_page_item ul {
   display: block;
@@ -553,6 +561,7 @@ li.current_page_parent ul, li.current_page_item ul {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 #content {
+  background-color: #fefefe;
   margin-left: 300px;
   padding-bottom:10px;
 }
@@ -589,7 +598,8 @@ li.current_page_parent ul, li.current_page_item ul {
 }
 /* Custom Post Styles */
 section.video {
-  background-color: #ccc;
+  background-color: #eee;
+  border: 1px solid #ccc;
   width: 500px;
   margin-left: 10px;
   margin-top: 10px;
@@ -600,6 +610,7 @@ section.video {
   background-color: #f1da0e;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  font-size: 18px;
 }
 .video .content_container {
   padding: 10px;
