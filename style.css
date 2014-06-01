@@ -615,6 +615,9 @@ section.video {
   border-top-left-radius: 4px;
   font-size: 18px;
 }
+.video .title_container h1 {
+  padding: 3px 0;
+}
 .video .content_container {
   padding: 10px;
 }
@@ -622,6 +625,7 @@ section.video {
   float: left;
   margin-right: 10px;
   border-radius: 3px;
+  border: 1px solid #777;
 }
 .arrow_down {
   width: 0;
