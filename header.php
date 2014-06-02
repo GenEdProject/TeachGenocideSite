@@ -28,7 +28,7 @@
       <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
     </div>
 
-    <img id="logo" src="/wp-content/themes/teachgen/GEPLogo-web.png"></img>
+    <img id="logo" src="https://s3.amazonaws.com/TeachGenocide/tg/GEPLogo-web.png"></img>
     <nav id="site-navigation" class="main-navigation" role="navigation">
       <h1 class="menu-toggle"><?php _e( 'Menu', 'teachgen' ); ?></h1>
       <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
