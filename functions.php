@@ -61,6 +61,13 @@ function teachgen_setup() {
       'has_archive' => true,
     )
   );
+  register_post_type('Documents',
+    array(
+      'labels' => array('name' => 'Documents'),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
   register_post_type('videos',
     array(
       'labels' => array('name' => 'Videos'),
