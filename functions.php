@@ -33,20 +33,14 @@ function teachgen_setup() {
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
 
-  /*
-   * Enable support for Post Thumbnails on posts and pages.
-   *
-   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-   */
-  //add_theme_support( 'post-thumbnails' );
-
-  // This theme uses wp_nav_menu() in one location.
+    // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'teachgen' ),
   ) );
 
   // Enable support for Post Formats.
   add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
 
   // Setup the WordPress core custom background feature.
   add_theme_support( 'custom-background', apply_filters( 'teachgen_custom_background_args', array(
@@ -61,19 +55,13 @@ function teachgen_setup() {
       'has_archive' => true,
     )
   );
-  register_post_type('Documents',
-    array(
-      'labels' => array('name' => 'Documents'),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
   register_post_type('videos',
     array(
       'labels' => array('name' => 'Videos'),
       'public' => true,
       'has_archive' => true,
       'taxonomy' => 'videos',
+      'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
   register_post_type('teaching_guides',
@@ -102,6 +90,8 @@ function teachgen_setup() {
 endif; // teachgen_setup
 add_action( 'after_setup_theme', 'teachgen_setup' );
 
+add_theme_support( 'post-thumbnails', array('post', 'videos')); 
+
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
@@ -109,7 +99,7 @@ function teachgen_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Sidebar', 'teachgen' ),
     'id'            => 'sidebar-1',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    ',before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h1 class="widget-title">',
     'after_title'   => '</h1>',
