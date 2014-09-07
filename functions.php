@@ -90,6 +90,7 @@ function teachgen_setup() {
 endif; // teachgen_setup
 add_action( 'after_setup_theme', 'teachgen_setup' );
 
+// Enable featured images in posts and vidoes
 add_theme_support( 'post-thumbnails', array('post', 'videos')); 
 
 /**
