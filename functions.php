@@ -33,14 +33,7 @@ function teachgen_setup() {
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
 
-  /*
-   * Enable support for Post Thumbnails on posts and pages.
-   *
-   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-   */
-  //add_theme_support( 'post-thumbnails' );
-
-  // This theme uses wp_nav_menu() in one location.
+    // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'teachgen' ),
   ) );
@@ -48,22 +41,22 @@ function teachgen_setup() {
   // Enable support for Post Formats.
   add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
+
   // Setup the WordPress core custom background feature.
   add_theme_support( 'custom-background', apply_filters( 'teachgen_custom_background_args', array(
     'default-color' => 'ffffff',
     'default-image' => '',
   ) ) );
-
-  register_post_type('books',
+  register_post_type('Documents',
     array(
-      'labels' => array('name' => 'Books'),
+      'labels' => array('name' => 'Documents'),
       'public' => true,
       'has_archive' => true,
     )
   );
-  register_post_type('Documents',
+  register_post_type('books',
     array(
-      'labels' => array('name' => 'Documents'),
+      'labels' => array('name' => 'Books'),
       'public' => true,
       'has_archive' => true,
     )
@@ -74,6 +67,7 @@ function teachgen_setup() {
       'public' => true,
       'has_archive' => true,
       'taxonomy' => 'videos',
+      'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
   register_post_type('teaching_guides',
@@ -101,6 +95,8 @@ function teachgen_setup() {
 }
 endif; // teachgen_setup
 add_action( 'after_setup_theme', 'teachgen_setup' );
+
+add_theme_support( 'post-thumbnails', array('post', 'videos')); 
 
 /**
  * Register widgetized area and update sidebar with default widgets.
