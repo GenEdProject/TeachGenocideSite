@@ -47,7 +47,13 @@ function teachgen_setup() {
     'default-color' => 'ffffff',
     'default-image' => '',
   ) ) );
-
+  register_post_type('Documents',
+    array(
+      'labels' => array('name' => 'Documents'),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
   register_post_type('books',
     array(
       'labels' => array('name' => 'Books'),
@@ -99,7 +105,7 @@ function teachgen_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Sidebar', 'teachgen' ),
     'id'            => 'sidebar-1',
-    ',before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h1 class="widget-title">',
     'after_title'   => '</h1>',
