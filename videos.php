@@ -24,7 +24,10 @@ $total = $myVideos->found_posts;
           <h1><?php the_title() ; ?></h1>
         </div>
         <div class="arrow_down"></div>
-        <div class="content_container"><?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?> <?php the_content() ; ?></div>
+        <div class="content_container">
+            <?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+            <?php the_content(); ?>
+        </div>
       </section> 
     <?php
       $i++;
@@ -40,7 +43,11 @@ $total = $myVideos->found_posts;
           <h1><?php the_title() ; ?></h1>
         </div>
         <div class="arrow_down"></div>
-        <div class="content_container"><?php the_content() ; ?></div>
+        <div class="content_container">
+            <?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+            <?php the_content(); ?>
+        </div>
+
       </section>
     <?php
       $i++;

@@ -364,7 +364,7 @@ header {
   height: 100%;
   position: fixed;
   overflow: auto;
-  background-color: #f1da0e;
+  background-color: #F6DB22;
   width: 300px;
 }
 .main-navigation {
@@ -599,40 +599,45 @@ li.current_page_parent ul, li.current_page_item ul {
   margin: 10px;
   padding: 10px;
 }
+
 /* Custom Post Styles */
+
 section.video {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  width: 500px;
-  margin-left: 5px;
-  margin-top: 12px;
-  border-radius: 4px;
+  background-color: #F6F6F6;
+  width: 45%;
+  margin-left: 20px;
+  margin-top: 5px;
+  float: left;
+  /* border: 1px solid #EEEEEE; */
+  /* border-radius: 4px; */
 }
 .video .title_container {
   text-align: center;
-  background-color: #f1da0e;
+  background-color: #F6DB22;
+  font-size: 18px;
+  /*
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  font-size: 18px;
+  */
 }
 .video .title_container h1 {
   padding: 3px 0;
 }
 .video .content_container {
-  padding: 10px;
+  padding: 5px;
 }
 .video img{
   float: left;
   margin-right: 10px;
-  border-radius: 3px;
   border: 1px solid #777;
+  /* border-radius: 3px; */
 }
 .arrow_down {
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
-  border-top: 9px solid #f1da0e;
+  border-top: 9px solid #F6DB22;
   position: relative;
   left: 50%;
   margin-left: -9px;
@@ -650,6 +655,14 @@ section.video {
   display: inline-block;
   vertical-align: top;
 }
+
+.custom_page_title {
+    position: relative;
+    float: top;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
