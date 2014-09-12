@@ -52,6 +52,7 @@ function teachgen_setup() {
       'labels' => array('name' => 'Documents'),
       'public' => true,
       'has_archive' => true,
+      'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
   register_post_type('books',
@@ -59,6 +60,7 @@ function teachgen_setup() {
       'labels' => array('name' => 'Books'),
       'public' => true,
       'has_archive' => true,
+      'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
   register_post_type('videos',
@@ -66,7 +68,6 @@ function teachgen_setup() {
       'labels' => array('name' => 'Videos'),
       'public' => true,
       'has_archive' => true,
-      'taxonomy' => 'videos',
       'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
@@ -75,6 +76,7 @@ function teachgen_setup() {
       'labels' => array('name' => 'Teaching Guides'),
       'public' => true,
       'has_archive' => true,
+      'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
   register_post_type('websites',
@@ -82,6 +84,7 @@ function teachgen_setup() {
       'labels' => array('name' => 'Websites'),
       'public' => true,
       'has_archive' => true,
+      'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
 
@@ -96,8 +99,8 @@ function teachgen_setup() {
 endif; // teachgen_setup
 add_action( 'after_setup_theme', 'teachgen_setup' );
 
-add_theme_support( 'post-thumbnails', array('post', 'videos')); 
-
+add_theme_support( 'post-thumbnails', array('post', 'videos'));
+add_theme_support( 'post-thumbnails', array('post', 'books'));
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
