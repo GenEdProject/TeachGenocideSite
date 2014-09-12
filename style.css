@@ -669,6 +669,16 @@ section.video {
     margin-left: 20px;
 }
 
+.custom_post_title {
+    position: relative;
+    float: top;
+    font-size: 24px;
+}
+
+.custom_post_container {
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
