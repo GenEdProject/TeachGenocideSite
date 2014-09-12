@@ -50,7 +50,7 @@
     var t = e.target;
     var path = t.getAttribute('href');
     var rerouted = false;
-    rerouted |= parse_and_reroute(path, 'resources', 'videos-and-books');
+    rerouted |= parse_and_reroute(path, 'resources', 'videos');
     rerouted |= parse_and_reroute(path, 'background', 'denial');
     return !rerouted;
   });
@@ -65,7 +65,7 @@
     if(currMMI.hasClass("clicked"))
     {
       currMMI.removeClass("clicked");
-      if (currSML.length !== 0) 
+      if (currSML.length !== 0)
       {
         currSML.slideUp(300);
         currMLB.show();
@@ -79,7 +79,7 @@
     else // if the MMI was not clicked
     {
       var prevSMLheight = 0;
-      var prevSMLisAbove = false; 
+      var prevSMLisAbove = false;
       $('.mainMenuItem').each(function() // close all other MMI
       {
         var iterMMI = $(this);
