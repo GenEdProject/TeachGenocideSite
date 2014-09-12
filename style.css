@@ -601,7 +601,13 @@ li.current_page_parent ul, li.current_page_item ul {
 }
 
 /* Custom Post Styles */
-
+section.website_container{
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
 section.video {
   background-color: #F6F6F6;
   width: 45%;
