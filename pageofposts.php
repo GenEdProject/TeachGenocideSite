@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Template Name: Page Of Posts
 */
@@ -6,8 +6,7 @@ Template Name: Page Of Posts
 get_header(); ?>
 
     <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
-        <?php 
+        <?php
         /* The loop: the_post retrieves the content
          * of the new Page you created to list the posts,
          * e.g., an intro describing the posts shown listed on this Page..
@@ -16,9 +15,9 @@ get_header(); ?>
             while ( have_posts() ) : the_post();
 
               // Display content of page
-              get_template_part( 'content', get_post_format() ); 
+              get_template_part( 'content', get_post_format() );
               wp_reset_postdata();
-  
+
             endwhile;
         endif;
 
@@ -26,7 +25,7 @@ get_header(); ?>
 
         $args = array(
             // Change these category SLUGS to suit your use.
-            'category_name' => 'press', 
+            'category_name' => 'press',
             'paged' => $paged
         );
 
@@ -35,7 +34,7 @@ get_header(); ?>
         <?php if ( $list_of_posts->have_posts() ) : ?>
             <?php /* The loop */ ?>
             <?php while ( $list_of_posts->have_posts() ) : $list_of_posts->the_post(); ?>
-                <div class="custom_post_container"> 
+                <div class="custom_post_container">
                 <div class="custom_post_title"> <?php the_title();?> </div>
                 <hr style="margin-bottom:10px; background-color:#000; height:1px; width:50% float:left">
                 <?php the_content();?>
@@ -45,7 +44,6 @@ get_header(); ?>
         <?php else : ?>
         <?php endif; ?>
 
-        </div><!-- #content -->
     </div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -51,7 +51,6 @@ function teachgen_setup() {
     array(
       'labels' => array('name' => 'Documents'),
       'public' => true,
-      'has_archive' => true,
       'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
@@ -59,7 +58,6 @@ function teachgen_setup() {
     array(
       'labels' => array('name' => 'Books'),
       'public' => true,
-      'has_archive' => true,
       'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
@@ -67,7 +65,6 @@ function teachgen_setup() {
     array(
       'labels' => array('name' => 'Videos'),
       'public' => true,
-      'has_archive' => true,
       'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
@@ -75,7 +72,6 @@ function teachgen_setup() {
     array(
       'labels' => array('name' => 'Teaching Guides'),
       'public' => true,
-      'has_archive' => true,
       'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );
@@ -83,7 +79,6 @@ function teachgen_setup() {
     array(
       'labels' => array('name' => 'Websites'),
       'public' => true,
-      'has_archive' => true,
       'supports' => array('title', 'editor', 'revisions', 'thumbnail')
     )
   );

@@ -39,8 +39,8 @@
   function parse_and_reroute(url, query, reroute_path) {
     if (!url) return;
     var i = url.indexOf(query);
-    if (i !== -1) {
-      window.location.href = url.substr(0, i) + reroute_path;
+    if (i !== -1 && (url.length - i - 1 === query.length)) {
+      window.location.href = url.substr(0, i) + query + '/' + reroute_path;
       return true;
     }
     return false;
@@ -52,6 +52,7 @@
     var rerouted = false;
     rerouted |= parse_and_reroute(path, 'resources', 'videos');
     rerouted |= parse_and_reroute(path, 'background', 'denial');
+    rerouted |= parse_and_reroute(path, 'register', 'for-supporters');
     return !rerouted;
   });
 
