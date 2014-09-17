@@ -608,7 +608,7 @@ section.website_container{
   margin-top: 10px;
   border-radius: 4px;
 }
-section.video {
+section.tile {
   background-color: #F6F6F6;
   width: 45%;
   margin-left: 20px;
@@ -617,7 +617,7 @@ section.video {
   /* border: 1px solid #EEEEEE; */
   /* border-radius: 4px; */
 }
-.video .title_container {
+.tile .title_container {
   text-align: center;
   background-color: #F6DB22;
   font-size: 18px;
@@ -626,16 +626,18 @@ section.video {
   border-top-left-radius: 4px;
   */
 }
-.video .title_container h1 {
+.tile .title_container h1 {
   padding: 3px 0;
 }
-.video .content_container {
+.tile .content_container {
   padding: 5px;
 }
-.video img{
+.tile img{
   float: left;
   margin-right: 10px;
   border: 1px solid #777;
+  height: 200px;
+  width: 150px;
   /* border-radius: 3px; */
 }
 .arrow_down {

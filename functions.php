@@ -93,9 +93,7 @@ function teachgen_setup() {
 }
 endif; // teachgen_setup
 add_action( 'after_setup_theme', 'teachgen_setup' );
-
-add_theme_support( 'post-thumbnails', array('post', 'videos'));
-add_theme_support( 'post-thumbnails', array('post', 'books'));
+add_theme_support( 'post-thumbnails' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
