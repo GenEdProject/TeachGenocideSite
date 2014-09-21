@@ -601,13 +601,6 @@ li.current_page_parent ul, li.current_page_item ul {
 }
 
 /* Custom Post Styles */
-section.website_container{
-  background-color: #eee;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 10px;
-  border-radius: 4px;
-}
 section.tile {
   background-color: #F6F6F6;
   width: 45%;
@@ -664,24 +657,50 @@ section.tile {
   vertical-align: top;
 }
 
+/* List */
+section.list_item_container{
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 10px;
+  /* border-radius: 4px; */
+}
+.list_item img{
+  float: left;
+  margin-right: 10px;
+  margin-top:   10px;
+  /* border: 1px solid #777 */
+  height: 64px;
+  width:  50px;
+}
+
+
+/* Page */
+.custom_page_padding {
+        padding: 20px;
+}
+
+
 .custom_page_title {
-    position: relative;
-    float: top;
-    font-size: 32px;
-    margin-left: 20px;
+        position: relative;
+        float: top;
+        font-size: 32px;
+        margin-left: 20px;
+}
+
+/* Press Release */
+
+.custom_post_container {
+        padding-bottom: 30px;
 }
 
 .custom_post_title {
-    position: relative;
-    float: top;
-    font-size: 24px;
+        position: relative;
+        float: top;
+        font-size: 24px;
 }
 
-.custom_post_container {
-    padding-right: 10px;
-    padding-bottom: 30px;
-}
-/*--------------------------------------------------------------
+*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,

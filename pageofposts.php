@@ -32,6 +32,7 @@ get_header(); ?>
         $list_of_posts = new WP_Query( $args );
         ?>
         <?php if ( $list_of_posts->have_posts() ) : ?>
+            <div class="custom_page_padding">
             <?php /* The loop */ ?>
             <?php while ( $list_of_posts->have_posts() ) : $list_of_posts->the_post(); ?>
                 <div class="custom_post_container">
@@ -40,7 +41,7 @@ get_header(); ?>
                 <?php the_content();?>
                 </div>
             <?php endwhile; ?>
-
+            </div>
         <?php else : ?>
         <?php endif; ?>
 
