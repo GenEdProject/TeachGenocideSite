@@ -658,20 +658,36 @@ section.tile {
 }
 
 /* List */
-section.list_item_container{
+section.list{
+}
+
+.list .title_container{
+  text-align: center;
+  font-weight: bold;
+  background-color: #F6DB22;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 4px;
+}  
+
+.list .item_container{
+  text-align: center;
   background-color: #eee;
   border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 10px;
+  padding-top: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 48%;
   /* border-radius: 4px; */
 }
-.list_item img{
+.list .item_container img{
   float: left;
   margin-right: 10px;
   margin-top:   10px;
-  /* border: 1px solid #777 */
   height: 64px;
   width:  50px;
+  /* border: 1px solid #777 */
 }
 
 
