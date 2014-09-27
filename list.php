@@ -20,12 +20,15 @@ $category_array = array();
 <!-- Get array of categories -->
 <?php while($i < $total) : $myItems->the_post(); ?>
     <?php
-        $category = get_the_category();
-        $category_name = (string) $category[0]->cat_name;
-        if(!in_array($category_name, $category_array) && ($category_name != ""))
+        if(has_category())
         {
-            $category_array[$category_name] = $category;
-            $j++;
+            $category = get_the_category();
+            $category_name = (string) $category[0]->cat_name;
+            if(!in_array($category_name, $category_array))
+            {
+                $category_array[$category_name] = $category;
+                $j++;
+            }
         }
     ?>    
 <?php $i++; endwhile;?>
