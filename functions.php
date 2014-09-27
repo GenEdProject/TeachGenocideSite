@@ -83,6 +83,7 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                         'labels' => array('name' => 'Websites'),
                         'public' => true,
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        'taxonomies' => array('category')
                         )
             );
         }
