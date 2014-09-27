@@ -50,21 +50,20 @@ $category_array = array();
         <h1> <?php echo $key ?> </h1>
     </div>
     <!-- <div class="arrow_down"> </div> -->
-    <?php
-        while($i < $total) : $currCatItems->the_post();  // while there are items of that cat?>
-                <?php if($i % 2 == 0) { ?>
-                    <div class="item_container" style="float: left;">
-                <?php } else { ?>
-                    <div class="item_container" style="float: right;">
-                <?php }?>
-                <b><?php the_title(); ?></b>
-                <?php
-                       if (has_post_thumbnail()) {
-                           the_post_thumbnail();
-                       }
-                       the_content();
-                ?> 
-                </div>
+    <?php while($i < $total) : $currCatItems->the_post();  // while there are items of that cat?>
+            <?php if($i % 2 == 0) { ?>
+                <div class="item_container" style="float: left;">
+            <?php } else { ?>
+                <div class="item_container" style="float: right;">
+            <?php }?>
+            <b><?php the_title(); ?></b>
+            <?php
+                   if (has_post_thumbnail()) {
+                       the_post_thumbnail();
+                   }
+                   the_content();
+            ?> 
+            </div>
     <?php $i++; endwhile;?>
     <div style="clear: both;"> </div>
 <?php } ?>

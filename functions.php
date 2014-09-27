@@ -35,18 +35,18 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
-                    'primary' => __( 'Primary Menu', 'teachgen' ),
-                    ) );
+            'primary' => __( 'Primary Menu', 'teachgen' ),
+        ) );
 
         // Enable support for Post Formats.
         add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
-
         // Setup the WordPress core custom background feature.
         add_theme_support( 'custom-background', apply_filters( 'teachgen_custom_background_args', array(
-                        'default-color' => 'ffffff',
-                        'default-image' => '',
-                        ) ) );
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ) ) );
+
         add_action('init', 'register_mypost_type');
         function register_mypost_type() {
             register_post_type('documents',
@@ -56,59 +56,61 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
                         'taxonomies' => array('category')
                         )
-                    );
+            );
             register_post_type('books',
                     array(
                         'labels' => array('name' => 'Books'),
                         'public' => true,
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail')
                         )
-                    );
+            );
             register_post_type('videos',
                     array(
                         'labels' => array('name' => 'Videos'),
                         'public' => true,
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail')
                         )
-                    );
+            );
             register_post_type('teaching_guides',
                     array(
                         'labels' => array('name' => 'Teaching Guides'),
                         'public' => true,
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail')
                         )
-                    );
+            );
             register_post_type('websites',
                     array(
                         'labels' => array('name' => 'Websites'),
                         'public' => true,
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail')
                         )
-                    );
+            );
         }
         // Enable support for HTML5 markup.
         add_theme_support( 'html5', array(
-                    'comment-list',
-                    'search-form',
-                    'comment-form',
-                    'gallery',
-                    ) );
+            'comment-list',
+            'search-form',
+            'comment-form',
+            'gallery',
+        ) );
     }
 endif; // teachgen_setup
+
 add_action( 'after_setup_theme', 'teachgen_setup' );
 add_theme_support( 'post-thumbnails' );
+
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
 function teachgen_widgets_init() {
     register_sidebar( array(
-                        'name'          => __( 'Sidebar', 'teachgen' ),
-                        'id'            => 'sidebar-1',
-                        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                        'after_widget'  => '</aside>',
-                        'before_title'  => '<h1 class="widget-title">',
-                        'after_title'   => '</h1>',
-                        ) );
+        'name'          => __( 'Sidebar', 'teachgen' ),
+        'id'            => 'sidebar-1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h1 class="widget-title">',
+        'after_title'   => '</h1>',
+    ) );
 }
 add_action( 'widgets_init', 'teachgen_widgets_init' );
 
