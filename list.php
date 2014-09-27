@@ -27,7 +27,6 @@ $category_array = array();
             if(!in_array($category_name, $category_array))
             {
                 $category_array[$category_name] = $category;
-                $j++;
             }
         }
     ?>    
