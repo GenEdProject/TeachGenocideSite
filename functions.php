@@ -82,7 +82,7 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Websites'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
                         'taxonomies' => array('category')
                         )
             );
