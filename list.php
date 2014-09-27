@@ -64,7 +64,7 @@ $category_array = array();
                        }
                        the_content();
                 ?> 
-              </div>
+                </div>
     <?php $i++; endwhile;?>
     <div style="clear: both;"> </div>
 <?php } ?>
