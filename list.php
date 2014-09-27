@@ -24,7 +24,7 @@ $category_array = array();
         {
             $category = get_the_category();
             $category_name = (string) $category[0]->cat_name;
-            if(!in_array($category_name, $category_array) && ($category_name != ""))
+            if(!in_array($category_name, $category_array))
             {
                 $category_array[$category_name] = $category;
                 $j++;
