@@ -37,7 +37,7 @@ $category_array = array();
 <?php function create_item() { ?>
     <div class="item_container">
         <b><?php the_title(); ?></b>
-        <p align="justify"><?php
+        <p><?php
                if (has_post_thumbnail()) {
                    the_post_thumbnail();
                }
@@ -86,7 +86,7 @@ $category_array = array();
         <?php
         while($i < $total) : $currCatItems->the_post();
             create_item();
-            if($i != $total / 2 - 1)
+            if($i != $total - 1)
             {
                 create_divider();
             }
@@ -94,25 +94,6 @@ $category_array = array();
         endwhile;
         ?>
     </div>
-
-
-
-
-
-
-
-
-    <!-- 
-    <?php while($i < $total) : $currCatItems->the_post();  // while there are items of that cat?>
-            <?php if($i % 2 == 0) { ?>
-                <div class="item_container" style="float: left;">
-            <?php } else { ?>
-                <div class="item_container" style="float: right;">
-            <?php }?>
-
-            </div>
-    <?php $i++; endwhile;?>
-    -->
     <div style="clear: both;"> </div>
 <?php } ?>
 </section>
