@@ -33,22 +33,24 @@ $total = $myTiles->found_posts;
 <?php } ?>
 
 <span class="custom_page_title"> <?php wp_title('', 'true'); ?> </span>
-<div class="column">
-    <?php
-    while($i < floor($total / 2)) : $myTiles->the_post();
-        create_tile();
-        $i++;
-    endwhile;
-    ?>
-</div>
+<div class="tiles">
+    <div class="column" style="float: left">
+        <?php
+        while($i < floor($total / 2)) : $myTiles->the_post();
+            create_tile();
+            $i++;
+        endwhile;
+        ?>
+    </div>
 
-<div class="column">
-    <?php
-    while($i < $total) : $myTiles->the_post();
-        create_tile();
-        $i++;
-    endwhile;
-    ?>
+    <div class="column" style="float: right">
+        <?php
+        while($i < $total) : $myTiles->the_post();
+            create_tile();
+            $i++;
+        endwhile;
+        ?>
+    </div>
 </div>
 
 <?php
