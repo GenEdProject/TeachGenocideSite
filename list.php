@@ -86,7 +86,7 @@ $category_array = array();
         <?php
         while($i < $total) : $currCatItems->the_post();
             create_item();
-            if($i != $total / 2 - 1)
+            if($i != $total - 1)
             {
                 create_divider();
             }
