@@ -34,6 +34,22 @@ $category_array = array();
 
 
 
+<?php function create_item() { ?>
+    <div class="item_container">
+        <b><?php the_title(); ?></b>
+        <p align="justify"><?php
+               if (has_post_thumbnail()) {
+                   the_post_thumbnail();
+               }
+               the_content();
+        ?></p>
+    </div>
+<?php } ?>
+
+<?php function create_divider() { ?>
+    <hr class="item_divider">
+<?php } ?>
+
 
 <!-- For each category get posts -->
 <div class="custom_page_padding">
@@ -51,22 +67,52 @@ $category_array = array();
     <div class="title_container">
         <h1> <?php echo $key ?> </h1>
     </div>
-    <!-- <div class="arrow_down"> </div> -->
+
+
+    <div class="column" style="float: left">
+        <?php
+        while($i < ceil($total / 2)) : $currCatItems->the_post();
+            create_item();
+            if($i != ceil($total / 2) - 1)
+            {
+                create_divider();
+            }
+            $i++;
+        endwhile;
+        ?>
+    </div>
+
+    <div class="column" style="float: right">
+        <?php
+        while($i < $total) : $currCatItems->the_post();
+            create_item();
+            if($i != $total / 2 - 1)
+            {
+                create_divider();
+            }
+            $i++;
+        endwhile;
+        ?>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 
     <?php while($i < $total) : $currCatItems->the_post();  // while there are items of that cat?>
             <?php if($i % 2 == 0) { ?>
                 <div class="item_container" style="float: left;">
             <?php } else { ?>
                 <div class="item_container" style="float: right;">
             <?php }?>
-            <b><?php the_title(); ?></b>
-            <?php
-                   if (has_post_thumbnail()) {
-                       the_post_thumbnail();
-                   }
-                   the_content();
-            ?> 
+
             </div>
     <?php $i++; endwhile;?>
+    -->
     <div style="clear: both;"> </div>
 <?php } ?>
 </section>

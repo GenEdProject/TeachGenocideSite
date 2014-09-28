@@ -659,9 +659,9 @@ section.list{
 
 .list .title_container{
   text-align: center;
-  font-weight: bold;
-  background-color: #F6DB22;
+  background-color: #999999;
   font-size: 18px;
+  /* color: #ffffff; white text */
   margin-top: 10px;
   margin-bottom: 5px;
   padding: 4px;
@@ -669,16 +669,17 @@ section.list{
 
 .list .item_container{
   text-align: center;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 48%;
-  /* border-radius: 4px; */
+  /* background-color: #eee; */
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  /* border-radius: 4px;
+  border: 1px solid #ccc; */
 }
+
 .list .item_container img{
   float: left;
   margin-right: 10px;
@@ -688,6 +689,16 @@ section.list{
   /* border: 1px solid #777 */
 }
 
+.list .column {
+  width: 50%;
+  margin: auto;
+}
+
+.list .item_divider{
+    width: 80%;
+    background-color: #ccc; 
+    height: 1px;
+}
 
 /* Page */
 .custom_page_padding {
