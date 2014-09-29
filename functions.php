@@ -61,14 +61,16 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Books'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'taxonomies' => array('category')
                         )
             );
             register_post_type('videos',
                     array(
                         'labels' => array('name' => 'Videos'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'taxonomies' => array('category')
                         )
             );
             register_post_type('teaching_guides',
