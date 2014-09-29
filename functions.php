@@ -78,6 +78,13 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                         'supports' => array('title', 'editor', 'revisions', 'thumbnail')
                         )
             );
+            register_post_type('survivor_accounts',
+                    array(
+                        'labels' => array('name' => 'Survivor Accounts'),
+                        'public' => true,
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        )
+            );
             register_post_type('websites',
                     array(
                         'labels' => array('name' => 'Websites'),
