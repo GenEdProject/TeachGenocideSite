@@ -659,7 +659,7 @@ section.list{
 
 .list .title_container{
   text-align: center;
-  background-color: #999999;
+  background-color: #fff;
   font-size: 18px;
   /* color: #ffffff; white text */
   margin-top: 10px;
@@ -699,6 +699,13 @@ section.list{
     background-color: #ccc; 
     height: 1px;
 }
+
+.list .list_divider{
+    width: 95%;
+    background-color: #ccc; 
+    height: 1px;
+}
+
 
 /* Page */
 .custom_page_padding {

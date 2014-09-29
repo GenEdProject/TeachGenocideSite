@@ -65,7 +65,9 @@ $category_array = array();
         $total = $currCatItems->found_posts;
     ?>
     <div class="title_container">
+        <center> <img src="<?php echo z_taxonomy_image_url($cat[0]->cat_ID); ?>" /> </center>
         <h1> <?php echo $key ?> </h1>
+        <hr class="list_divider">
     </div>
 
 
