@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: List
+* Template Name: List Left
 * */
 
 get_header();
@@ -35,7 +35,7 @@ $category_array = array();
 
 
 <?php function create_item() { ?>
-    <div class="item_container">
+    <div class="item_container_left">
         <b><?php the_title(); ?></b>
         <p><?php
                if (has_post_thumbnail()) {
@@ -47,7 +47,7 @@ $category_array = array();
 <?php } ?>
 
 <?php function create_divider() { ?>
-    <hr class="item_divider">
+    <hr class="item_divider_left">
 <?php } ?>
 
 

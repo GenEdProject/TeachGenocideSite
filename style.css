@@ -659,7 +659,7 @@ section.list{
 
 .list .title_container{
   text-align: center;
-  background-color: #999999;
+  background-color: #fff;
   font-size: 18px;
   /* color: #ffffff; white text */
   margin-top: 10px;
@@ -680,13 +680,36 @@ section.list{
   border: 1px solid #ccc; */
 }
 
+.list .item_container_left{
+  text-align: left;
+  /* background-color: #eee; */
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  /* border-radius: 4px;
+  border: 1px solid #ccc; */
+}
+
+
 .list .item_container img{
   float: left;
   margin-right: 10px;
   margin-top:   10px;
-  height: 64px;
-  width:  50px;
-  /* border: 1px solid #777 */
+  height: 128px;
+  width:  100px;
+  border: 1px solid #777;
+}
+
+.list .item_container_left img{
+  float: left;
+  margin-right: 10px;
+  margin-top:   10px;
+  height: 128px;
+  width:  100px;
+border: 1px solid #777;
 }
 
 .list .column {
@@ -699,6 +722,18 @@ section.list{
     background-color: #ccc; 
     height: 1px;
 }
+
+.list .item_divider_left{
+    width: 90%;
+    background-color: #ccc; 
+    height: 1px;
+}
+.list .list_divider{s
+    width: 95%;
+    background-color: #ccc; 
+    height: 1px;
+}
+
 
 /* Page */
 .custom_page_padding {
