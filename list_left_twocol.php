@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: List Left
+* Template Name: List Left Two Columns
 * */
 
 get_header();
@@ -15,6 +15,7 @@ $i = 0;
 $total = $myItems->found_posts;
 $category_array = array();
 ?>
+
 
 <!-- Get array of categories -->
 <?php while($i < $total) : $myItems->the_post(); ?>
@@ -82,17 +83,32 @@ $category_array = array();
                 <hr class="list_divider">
             </div>
 
-            <?php
-            while($i < $total) : $currCatItems->the_post();
-                create_item();
-                if($i != $total - 1)
-                {
-                    create_divider();
-                }
-                $i++;
-            endwhile;
-            ?>
 
+            <div class="column" style="float: left">
+                <?php
+                while($i < ceil($total / 2)) : $currCatItems->the_post();
+                    create_item();
+                    if($i != ceil($total / 2) - 1)
+                    {
+                        create_divider();
+                    }
+                    $i++;
+                endwhile;
+                ?>
+            </div>
+
+            <div class="column" style="float: right">
+                <?php
+                while($i < $total) : $currCatItems->the_post();
+                    create_item();
+                    if($i != $total - 1)
+                    {
+                        create_divider();
+                    }
+                    $i++;
+                endwhile;
+                ?>
+            </div>
             <div style="clear: both;"> </div>
         <?php } ?>
     </section>

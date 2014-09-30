@@ -669,7 +669,6 @@ section.list{
 
 .list .item_container{
   text-align: center;
-  /* background-color: #eee; */
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -682,7 +681,6 @@ section.list{
 
 .list .item_container_left{
   text-align: left;
-  /* background-color: #eee; */
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -694,7 +692,15 @@ section.list{
 }
 
 
-.list .item_container img{
+.list .item_container_thumb{
+  margin-right: 10px;
+  margin-top:   10px;
+  height: 128px;
+  width:  100px;
+  border: 1px solid #777;
+}
+
+.list .item_container_thumb_left{
   float: left;
   margin-right: 10px;
   margin-top:   10px;
@@ -703,33 +709,24 @@ section.list{
   border: 1px solid #777;
 }
 
-.list .item_container_left img{
-  float: left;
-  margin-right: 10px;
-  margin-top:   10px;
-  height: 128px;
-  width:  100px;
-border: 1px solid #777;
-}
-
 .list .column {
   width: 50%;
   margin: auto;
 }
 
 .list .item_divider{
-    width: 80%;
+    width: 95%;
     background-color: #ccc; 
     height: 1px;
 }
 
 .list .item_divider_left{
-    width: 90%;
+    width: 95%;
     background-color: #ccc; 
     height: 1px;
 }
-.list .list_divider{s
-    width: 95%;
+.list .list_divider{
+    width: 98%;
     background-color: #ccc; 
     height: 1px;
 }
@@ -742,10 +739,16 @@ border: 1px solid #777;
 
 
 .custom_page_title {
-        position: relative;
-        float: top;
-        font-size: 32px;
-        margin-left: 20px;
+  position: relative;
+  float: top;
+  font-size: 32px;
+  margin-left: 20px;
+}
+
+.custom_page_content{
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Press Release */
