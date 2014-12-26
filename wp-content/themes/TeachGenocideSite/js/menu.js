@@ -39,8 +39,8 @@
   function parse_and_reroute(url, query, reroute_path) {
     if (!url) return;
     var i = url.indexOf(query);
-    if (i !== -1) {
-      window.location.href = url.substr(0, i) + reroute_path;
+    if (i !== -1 && (url.length - i - 1 === query.length)) {
+      window.location.href = url.substr(0, i) + query + '/' + reroute_path;
       return true;
     }
     return false;
@@ -50,8 +50,9 @@
     var t = e.target;
     var path = t.getAttribute('href');
     var rerouted = false;
-    rerouted |= parse_and_reroute(path, 'resources', 'videos-and-books');
+    rerouted |= parse_and_reroute(path, 'resources', 'videos');
     rerouted |= parse_and_reroute(path, 'background', 'denial');
+    rerouted |= parse_and_reroute(path, 'register', 'for-supporters');
     return !rerouted;
   });
 
@@ -65,7 +66,7 @@
     if(currMMI.hasClass("clicked"))
     {
       currMMI.removeClass("clicked");
-      if (currSML.length !== 0) 
+      if (currSML.length !== 0)
       {
         currSML.slideUp(300);
         currMLB.show();
@@ -79,7 +80,7 @@
     else // if the MMI was not clicked
     {
       var prevSMLheight = 0;
-      var prevSMLisAbove = false; 
+      var prevSMLisAbove = false;
       $('.mainMenuItem').each(function() // close all other MMI
       {
         var iterMMI = $(this);
