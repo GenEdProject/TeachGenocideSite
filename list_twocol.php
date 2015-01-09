@@ -31,12 +31,12 @@ $page_cover_img = 'Educator_Resources.png';
                 $category_array[$category_name] = $category;
             }
         }
-    ?>    
+    ?>
 <?php $i++; endwhile;?>
 
 
 <!-- Get the content of the page itself -->
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
         if( '' !== get_post()->post_content ) { ?>
             <?php $page_content = get_the_content(); ?>
 <?php } endwhile; else:
@@ -67,7 +67,7 @@ endif;
 <div class="custom_page_padding">
 
     <!-- Title -->
-    <div class="title_container" style="background-image: url('/wp-content/themes/TeachGenocideSite/images/<?=$page_cover_img?>')">
+    <div class="title_container" style="background-image: url('/wp-content/themes/teachgen/images/<?=$page_cover_img?>')">
         <div class="title_text">
             <h1> <?php echo get_the_title(); ?> </h1>
             <?php if (strlen($page_content)) { ?>

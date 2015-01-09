@@ -29,7 +29,7 @@
     </div>
 
     <div class="logo_container">
-      <img id="logo" src="/wp-content/themes/TeachGenocideSite/images/GEPLogo-web.png"></img>
+      <img id="logo" src="/wp-content/themes/teachgen/images/GEPLogo-web.png"></img>
     </div>
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
