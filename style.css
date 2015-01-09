@@ -354,19 +354,23 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 #logo {
-  margin-top: 20px;
-  margin-left: 75px;
-  width: 150px;
+  margin-top: 15px;
+  margin-left: 50px;
+  width: 120px;
+  height: 120px;
+}
+
+.logo_container {
   height: 150px;
 }
 
 header {
-  height: 100%;
   position: fixed;
-  overflow: auto;
+  /*overflow: auto;*/
   background-color: #F6DB22;
-  width: 300px;
+  width: 100%;
 }
+
 .main-navigation {
   clear: both;
   display: block;
@@ -563,9 +567,8 @@ li.current_page_parent ul, li.current_page_item ul {
 --------------------------------------------------------------*/
 #content {
   background-color: #fefefe;
-  margin-left: 300px;
-  padding-left: 7px;
-  padding-bottom: 10px;
+  padding-top: 190px;
+  padding-bottom: 50px;
 }
 .entry-header{
   display: none;
@@ -613,7 +616,6 @@ section.tile {
 }
 .tile .title_container {
   text-align: center;
-  background-color: #F6DB22;
   font-size: 18px;
 }
 .tile .title_container h1 {
@@ -655,17 +657,39 @@ section.tile {
 
 /* List */
 section.list{
+  width: 100%
 }
 
-.list .title_container{
+.title_container {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.title_container .title_text {
+  padding-left: 90px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+
+.title_container .title_text h1 {
+  font-size: 50px;
+}
+
+.title_container .title_text p {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.list .cat_container {
   text-align: center;
-  background-color: #fff;
   font-size: 18px;
-  /* color: #ffffff; white text */
-  margin-top: 10px;
-  margin-bottom: 5px;
-  padding: 4px;
-}  
+}
+
+.list .cat_container h1 {
+  padding: 3px 0;
+}
 
 .list .item_container{
   text-align: center;
@@ -734,15 +758,13 @@ section.list{
 
 /* Page */
 .custom_page_padding {
-        padding: 20px;
+    padding-bottom: 20px;
 }
-
 
 .custom_page_title {
   position: relative;
   float: top;
   font-size: 32px;
-  margin-left: 20px;
 }
 
 .custom_page_content{

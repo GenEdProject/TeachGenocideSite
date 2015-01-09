@@ -14,6 +14,8 @@ $myItems = new WP_Query( $args );
 $i = 0;
 $total = $myItems->found_posts;
 $category_array = array();
+$page_content = '';
+$page_cover_img = 'Educator_Resources.png';
 ?>
 
 
@@ -31,6 +33,16 @@ $category_array = array();
         }
     ?>    
 <?php $i++; endwhile;?>
+
+
+<!-- Get the content of the page itself -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+        if( '' !== get_post()->post_content ) { ?>
+            <?php $page_content = get_the_content(); ?>
+<?php } endwhile; else:
+    // no posts found
+endif;
+?>
 
 
 <!-- Functions -->
@@ -54,16 +66,15 @@ $category_array = array();
 <!-- Start making the page -->
 <div class="custom_page_padding">
 
-    <!-- Get the content of the page itself -->
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-            if( '' !== get_post()->post_content ) { ?>
-                <div class="custom_page_content">
-                    <?php the_content(); ?>
-                </div>
-    <?php } endwhile; else:
-        // no posts found
-    endif;
-    ?>
+    <!-- Title -->
+    <div class="title_container" style="background-image: url('/wp-content/themes/TeachGenocideSite/images/<?=$page_cover_img?>')">
+        <div class="title_text">
+            <h1> <?php echo get_the_title(); ?> </h1>
+            <?php if (strlen($page_content)) { ?>
+                <p> <?php echo $page_content ?> </p>
+            <?php } ?>
+        </div>
+    </div>
 
     <!-- Make the list -->
     <section class="list">
@@ -77,7 +88,7 @@ $category_array = array();
                 $i = 0;
                 $total = $currCatItems->found_posts;
             ?>
-            <div class="title_container">
+            <div class="cat_container">
                 <center> <img src="<?php echo z_taxonomy_image_url($cat[0]->cat_ID); ?>" /> </center>
                 <h1> <?php echo $key ?> </h1>
                 <hr class="list_divider">
