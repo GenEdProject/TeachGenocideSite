@@ -23,6 +23,10 @@
   <div id="selector"></div>
 
   <header id="masthead" class="site-header" role="banner">
+    <h1 class="site_title">The Genocide Education Project</h1>
+    <a href='https://www.facebook.com/genedpro' class='facebook_widget'>
+      <img src="/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png">
+    </a>
     <div class="site-branding">
       <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
       <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>

@@ -371,6 +371,20 @@ header {
   width: 100%;
 }
 
+header .site_title {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.facebook_widget {
+  position: absolute;
+  right: 15px;
+  top: 105px;
+}
+
 .main-navigation {
   clear: both;
   display: block;
@@ -759,6 +773,7 @@ section.list{
 /* Page */
 .custom_page_padding {
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .custom_page_title {
