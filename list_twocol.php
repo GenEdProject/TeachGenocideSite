@@ -67,7 +67,7 @@ endif;
 <div class="custom_page_padding">
 
     <!-- Title -->
-    <div class="title_container" style="background-image: url('/wp-content/themes/teachgen/images/<?=$page_cover_img?>')">
+    <div class="title_container" style="background-image: url('./wp-content/themes/teachgen/images/<?=$page_cover_img?>')">
         <div class="title_text">
             <h1> <?php echo get_the_title(); ?> </h1>
             <?php if (strlen($page_content)) { ?>
