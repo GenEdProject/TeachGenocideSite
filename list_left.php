@@ -14,6 +14,7 @@ $myItems = new WP_Query( $args );
 $i = 0;
 $total = $myItems->found_posts;
 $category_array = array();
+$page_content = '';
 ?>
 
 <!-- Get array of categories -->
@@ -31,6 +32,17 @@ $category_array = array();
     ?>    
 <?php $i++; endwhile;?>
 
+
+<!-- Get the content of the page itself -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+        if( '' !== get_post()->post_content ) { ?>
+            <div class="custom_page_content">
+                <?php the_content(); ?>
+            </div>
+<?php } endwhile; else:
+    // no posts found
+endif;
+?>
 
 <!-- Functions -->
 <?php function create_item() { ?>
@@ -51,18 +63,22 @@ $category_array = array();
 
 
 <!-- Start making the page -->
-<div class="custom_page_padding">
 
-    <!-- Get the content of the page itself -->
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-            if( '' !== get_post()->post_content ) { ?>
-                <div class="custom_page_content">
-                    <?php the_content(); ?>
-                </div>
-    <?php } endwhile; else:
-        // no posts found
-    endif;
-    ?>
+<!-- Title -->
+<?php if (has_post_thumbnail( $post->ID )) : ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+<div class="title_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
+<?php endif; ?>
+    <div class="title_text">
+        <h1> <?php echo get_the_title(); ?> </h1>
+        <?php if (strlen($page_content)) { ?>
+            <p> <?php echo $page_content ?> </p>
+        <?php } ?>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="custom_page_padding">
 
     <!-- Make the list -->
     <section class="list">
@@ -96,6 +112,7 @@ $category_array = array();
             <div style="clear: both;"> </div>
         <?php } ?>
     </section>
+
 </div>
 
 

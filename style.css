@@ -678,6 +678,8 @@ section.list{
   text-align: left;
   width: 100%;
   margin-bottom: 20px;
+  /* background-repeat: no-repeat; */
+  background-position: 0% 50%;
 }
 
 .title_container .title_text {
