@@ -719,7 +719,7 @@ section.list{
   border: 1px solid #ccc; */
 }
 
-.list .item_container_left{
+.list .item_container_left {
   text-align: left;
   padding: 20px;
   margin-top: 10px;
@@ -732,7 +732,7 @@ section.list{
 }
 
 
-.list .item_container_thumb{
+.list .item_container_thumb {
   margin-right: 10px;
   margin-top:   10px;
   height: 128px;
@@ -740,7 +740,7 @@ section.list{
   border: 1px solid #777;
 }
 
-.list .item_container_thumb_left{
+.list .item_container_thumb_left {
   float: left;
   margin-right: 10px;
   margin-top:   10px;
@@ -774,8 +774,7 @@ section.list{
 
 /* Page */
 .custom_page_padding {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 .custom_page_title {
@@ -793,13 +792,84 @@ section.list{
 /* Press Release */
 
 .custom_post_container {
-        padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .custom_post_title {
-        position: relative;
-        float: top;
-        font-size: 24px;
+  position: relative;
+  float: top;
+  font-size: 24px;
+}
+
+/* Home Page */
+.home_item {
+  margin: 6px;
+  float: left;
+  vertical-align: middle;
+}
+
+.home_item  span {
+  margin-left: 4px;
+  float: left;
+  font-size: 16px;
+}
+
+.arrow_right {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid rgb(200, 200, 200);
+  float: left;
+}
+
+.home_title_container {
+  text-align: left;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  /* background-repeat: no-repeat; */
+  background-position: 0% 50%;
+}
+
+.home_title_container .title_text {
+  padding-left: 90px;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  float: left;
+  width: 600px;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.home_title_container .title_text h1 {
+  font-size: 50px;
+}
+
+.press_window {
+  height: 250px;
+  width: 500px;
+  float: right;
+  margin-right: 90px;
+  margin-top: 25px;
+  background-color: #175576;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.press_window_text {
+  font-size: 14px;
+  padding: 16px;
+  color: #ffffff;
+}
+
+.press_window_text p {
+  padding-top: 4px;
+  font-size: 14px;
+}
+
+.press_window_text b {
+  font-size: 16px;
 }
 
 /*--------------------------------------------------------------

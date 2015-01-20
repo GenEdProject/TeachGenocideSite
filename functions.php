@@ -49,6 +49,13 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
 
         add_action('init', 'register_mypost_type');
         function register_mypost_type() {
+            register_post_type('home_items',
+                    array(
+                        'labels' => array('name' => 'Home Items'),
+                        'public' => true,
+                        'supports' => array('title')
+                        )
+            );            
             register_post_type('documents',
                     array(
                         'labels' => array('name' => 'Documents'),
