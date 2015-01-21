@@ -66,12 +66,12 @@ endif;
 
 <!-- Start making the page -->
 
-<!-- Title -->
+<!-- Banner -->
 <?php if (has_post_thumbnail( $post->ID )) : ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-<div class="title_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
+<div class="banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
 <?php endif; ?>
-    <div class="title_text">
+    <div class="banner_text">
         <h1> <?php echo get_the_title(); ?> </h1>
         <?php if (strlen($page_content)) { ?>
             <p> <?php echo $page_content ?> </p>

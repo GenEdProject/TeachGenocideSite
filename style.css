@@ -628,11 +628,11 @@ section.tile {
   clear: both;
   overflow: hidden;
 }
-.tile .title_container {
+.title_container {
   text-align: center;
   font-size: 18px;
 }
-.tile .title_container h1 {
+.title_container h1 {
   padding: 3px 0;
 }
 .tile .content_container {
@@ -674,7 +674,7 @@ section.list{
   width: 100%
 }
 
-.title_container {
+.banner_container {
   text-align: left;
   width: 100%;
   margin-bottom: 20px;
@@ -682,18 +682,18 @@ section.list{
   background-position: 0% 50%;
 }
 
-.title_container .title_text {
+.banner_container .banner_text {
   padding-left: 90px;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
 }
 
-.title_container .title_text h1 {
+.banner_container .banner_text h1 {
   font-size: 50px;
 }
 
-.title_container .title_text p {
+.banner_container .banner_text p {
   padding-left: 20px;
   font-size: 20px;
 }
