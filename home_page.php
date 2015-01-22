@@ -65,7 +65,6 @@ endif;
         </div>
 
         <?php endwhile; endif; ?>
-        ?>
     </div>
 </div>
 
