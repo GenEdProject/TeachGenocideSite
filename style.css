@@ -774,7 +774,9 @@ section.list{
 
 /* Page */
 .custom_page_padding {
-    padding: 20px;
+  padding-top: 40px;
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 .custom_page_title {
@@ -848,7 +850,7 @@ section.list{
 
 .press_window {
   height: 250px;
-  width: 500px;
+  width: 600px;
   float: right;
   margin-right: 90px;
   margin-top: 25px;
@@ -870,6 +872,21 @@ section.list{
 
 .press_window_text b {
   font-size: 16px;
+}
+
+.home_text_window {
+  width: 600px;
+}
+
+.home_text_window p {
+  font-size: 16px;
+  padding: 16px;
+}
+
+.home_text_title {
+  padding-left: 16px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------

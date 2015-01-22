@@ -13,18 +13,18 @@ $args = array(
 $myItems = new WP_Query( $args );
 $i = 0;
 $total = $myItems->found_posts;
+$page_content = '';
 ?>
 
 
-<!-- Get the content of the page itself
+<!-- Get the content of the page itself -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
         if( '' !== get_post()->post_content ) { ?>
-                <?php $page_content = the_content(); ?>
+                <?php $page_content = get_the_content(); ?>
 <?php } endwhile; else:
     // no posts found
 endif;
 ?>
- -->
 
 
  <!-- Get latest press post -->
@@ -33,7 +33,7 @@ endif;
 <?php function create_item() { ?>
     <div class="home_item">
         <div class="arrow_right"> </div>
-        <span> <?php the_title(); ?> </span>
+        <span> <a href="<?php echo get_the_content(); ?> "> <?php the_title(); ?> </a> </span>
     </div>
 <?php } ?>
 
@@ -77,6 +77,11 @@ endif;
                 $i++;
             endwhile;
             ?>
+
+    <div style="float: right;">
+        <div class="home_text_title"> About </div>
+        <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
+    </div>
 </div>
 
 

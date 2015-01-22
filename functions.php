@@ -53,7 +53,7 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Home Items'),
                         'public' => true,
-                        'supports' => array('title')
+                        'supports' => array('title', 'editor', 'revisions')
                         )
             );            
             register_post_type('documents',
