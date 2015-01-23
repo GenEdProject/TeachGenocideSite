@@ -419,6 +419,11 @@ header .site_title {
   height: 29px;
   width: 29px;
 }
+
+.social_widgets a {
+  text-decoration: none;
+}
+
 .main-navigation {
   clear: both;
   display: block;
