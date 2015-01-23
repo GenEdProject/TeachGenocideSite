@@ -207,17 +207,6 @@ hr {
   height: 1px;
   margin-bottom: 1.5em;
 }
-ul, ol {
-  margin: 0 0 1.5em 3em;
-}
-ol {
-  list-style: decimal;
-}
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
-}
 dt {
   font-weight: bold;
 }
@@ -352,7 +341,7 @@ a {
 --------------------------------------------------------------*/
 #logo {
   margin-top: 15px;
-  margin-left: 50px;
+  margin-left: 80px;
   width: 120px;
   height: 120px;
 }
@@ -367,9 +356,13 @@ footer {
   height: 200px;
 }
 
+footer .social_widgets {
+  top: auto;
+}
+
 .footer_content {
   color: white;
-  padding-left: 40px;
+  padding-left: 85px;
 }
 
 .footer_content .left_submenu {
@@ -390,7 +383,6 @@ footer {
 .footer_content .copyright {
   position: relative;
   top: 160px;
-  left: 47px;
   font-size: 11px;
 }
 
@@ -404,7 +396,7 @@ header {
 header .site_title {
   position: absolute;
   top: 50px;
-  left: 200px;
+  left: 230px;
   font-size: 30px;
   font-weight: bold;
 }
@@ -621,7 +613,6 @@ li.current_page_parent ul, li.current_page_item ul {
 #content {
   background-color: #fefefe;
   padding-top: 180px;
-  padding-bottom: 50px;
 }
 .entry-header{
   display: none;

@@ -23,6 +23,14 @@
         <li>Site Map</li>
       </ul>
     </div>
+    <div class="social_widgets">
+        <a href='https://www.youtube.com/user/Genocideeducation/featured'>
+          <img src="/wp-content/themes/teachgen/images/YouTube-icon-full_color.png" class="youtube_widget" >
+        </a>
+        <a href='https://www.facebook.com/genedpro'>
+          <img src="/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png">
+        </a>
+    </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->
 
