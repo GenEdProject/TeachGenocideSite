@@ -70,15 +70,20 @@ endif;
 
 <!-- Content -->
 <div class="custom_page_padding">
+    <div style="float: left; width: 600px;">
+        <div class="home_text_title"> Teaching Resources </div>
+        <div class="home_item_window">
             <?php
             while($i < $total) : $myItems->the_post();
                 create_item();
                 $i++;
             endwhile;
             ?>
+        </div>
+    </div>
 
-    <div style="float: right;">
-        <div class="home_text_title"> About </div>
+    <div style="float: right; width=600px;">
+        <div class="home_text_title"> The Genocide Education Project </div>
         <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
     </div>
 </div>
