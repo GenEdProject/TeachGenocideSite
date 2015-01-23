@@ -210,9 +210,6 @@ hr {
 ul, ol {
   margin: 0 0 1.5em 3em;
 }
-ul {
-  list-style: disc;
-}
 ol {
   list-style: decimal;
 }
@@ -362,6 +359,39 @@ a {
 
 .logo_container {
   height: 150px;
+  background-color: #ddd;
+}
+
+footer {
+  background-color: #A92D15;
+  height: 200px;
+}
+
+.footer_content {
+  color: white;
+  padding-left: 40px;
+}
+
+.footer_content .left_submenu {
+  width: 50%;
+  float: left;
+}
+
+.footer_content .right_submenu {
+  width: 43%;
+  float: right;
+}
+
+.footer_content li {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.footer_content .copyright {
+  position: relative;
+  top: 160px;
+  left: 47px;
+  font-size: 11px;
 }
 
 header {
@@ -379,12 +409,16 @@ header .site_title {
   font-weight: bold;
 }
 
-.facebook_widget {
+.social_widgets{
   position: absolute;
   right: 15px;
   top: 105px;
 }
 
+.youtube_widget {
+  height: 29px;
+  width: 29px;
+}
 .main-navigation {
   clear: both;
   display: block;
@@ -859,7 +893,7 @@ section.list{
 }
 
 .press_window {
-  height: 250px;
+  height: 266px;
   width: 600px;
   float: right;
   margin-right: 90px;
@@ -871,7 +905,7 @@ section.list{
 
 .press_window_text {
   font-size: 14px;
-  padding: 16px;
+  padding: 12px;
   color: #ffffff;
 }
 
