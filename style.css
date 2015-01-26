@@ -641,10 +641,7 @@ li.current_page_parent ul, li.current_page_item ul {
 }
 
 .article_container {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
+  font-size: 16px;
 }
 
 /* Custom Post Styles */
@@ -707,7 +704,6 @@ section.list{
 .banner_container {
   text-align: left;
   width: 100%;
-  margin-bottom: 20px;
   /* background-repeat: no-repeat; */
   background-position: 0% 50%;
 }
