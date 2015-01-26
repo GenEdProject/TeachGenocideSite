@@ -354,6 +354,7 @@ a {
 footer {
   background-color: #A92D15;
   height: 200px;
+  position: relative;
 }
 
 footer .social_widgets {
@@ -363,6 +364,11 @@ footer .social_widgets {
 .footer_content {
   color: white;
   padding-left: 85px;
+  margin-top: 16px;
+}
+
+.footer_content  a {
+  color: white;
 }
 
 .footer_content .left_submenu {
@@ -371,7 +377,7 @@ footer .social_widgets {
 }
 
 .footer_content .right_submenu {
-  width: 43%;
+  width: 49%;
   float: right;
 }
 
@@ -381,8 +387,9 @@ footer .social_widgets {
 }
 
 .footer_content .copyright {
-  position: relative;
-  top: 160px;
+  position: absolute;
+  left: 85px;
+  bottom: 20px;
   font-size: 11px;
 }
 
@@ -395,10 +402,11 @@ header {
 
 header .site_title {
   position: absolute;
-  top: 50px;
-  left: 230px;
-  font-size: 30px;
-  font-weight: bold;
+  top: 46px;
+  left: 220px;
+  font-size: 39px;
+  font-family: garamond;
+  color: #333;
 }
 
 .social_widgets{
