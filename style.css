@@ -351,13 +351,13 @@ a {
   background-color: #ddd;
 }
 
-footer {
+.site-footer {
   background-color: #A92D15;
   height: 200px;
   position: relative;
 }
 
-footer .social_widgets {
+.site-footer .social_widgets {
   top: auto;
 }
 
