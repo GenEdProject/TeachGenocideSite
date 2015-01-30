@@ -340,14 +340,15 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 #logo {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 80px;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 .logo_container {
-  height: 150px;
+  height: 120px;
   background-color: #1B2333;
 }
 
@@ -402,17 +403,17 @@ header {
 
 header .site_title {
   position: absolute;
-  top: 46px;
-  left: 220px;
+  top: 35px;
+  left: 210px;
   font-size: 39px;
   font-family: garamond;
-  color: #333;
+  color: #FFFFFF;
 }
 
 .social_widgets{
   position: absolute;
   right: 15px;
-  top: 105px;
+  top: 90px;
 }
 
 .youtube_widget {
@@ -620,7 +621,7 @@ li.current_page_parent ul, li.current_page_item ul {
 --------------------------------------------------------------*/
 #content {
   background-color: #fefefe;
-  padding-top: 180px;
+  padding-top: 155px;
 }
 .entry-header{
   display: none;
@@ -898,7 +899,7 @@ section.list{
   float: right;
   margin-right: 90px;
   margin-top: 25px;
-  background-color: #175576;
+  background-color: #263248;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -939,7 +940,7 @@ section.list{
   padding-left: 16px;
   font-size: 20px;
   font-weight: bold;
-  background-color: #175576;
+  background-color: #263248;
   border-radius: 5px;
   color: #ffffff;
 }
