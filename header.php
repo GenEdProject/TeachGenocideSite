@@ -23,8 +23,12 @@
   <div id="selector"></div>
 
   <header id="masthead" class="site-header" role="banner">
-    <h1 class="site_title">The Genocide Education Project</h1>
-    <div class="social_widgets">
+
+    <div class="main_banner">
+     <h1 class="site_title">The Genocide Education Project</h1>
+      <img id="logo" src="/wp-content/themes/teachgen/images/GEPLogoBlack-web.png"></img>
+
+      <div class="social_widgets">
         <a href='https://www.youtube.com/user/Genocideeducation/featured'>
           <img src="/wp-content/themes/teachgen/images/YouTube-icon-full_color.png" class="youtube_widget" >
         </a>
@@ -32,16 +36,12 @@
           <img src="/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png">
         </a>
     </div>
-    <div class="site-branding">
-      <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-      <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-    </div>
 
-    <div class="logo_container">
-      <img id="logo" src="/wp-content/themes/teachgen/images/GEPLogoBlack-web.png"></img>
     </div>
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
+      <!-- <script type="text/javascript" src="\wp-content\themes\teachgen\scripts\sticky_menu.js"></script> -->
+
       <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
 
       <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

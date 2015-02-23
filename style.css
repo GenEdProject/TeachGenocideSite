@@ -347,8 +347,8 @@ a {
   height: 100px;
 }
 
-.logo_container {
-  height: 120px;
+.main_banner {
+  position: relative;
   background-color: #1B2333;
 }
 
@@ -395,7 +395,7 @@ a {
 }
 
 header {
-  position: fixed;
+  /*position: fixed;*/
   /*overflow: auto;*/
   background-color: #FFFFFF;
   width: 100%;
