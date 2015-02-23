@@ -138,8 +138,32 @@ textarea {
   font-size: 1.6rem;
   line-height: 1.5;
 }
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-size: 28px;
+  margin-bottom: 1em;
   clear: both;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 1em;
+  clear: both;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 1em;
+  clear: both; 
+}
+h4 {
+  font-size: 16px;
+  clear: both; 
+} 
+h5 {
+  font-size: 14px;
+  clear: both; 
+}
+h6 {
+  font-size: 12px;
+  clear: both; 
 }
 p {
   margin-bottom: 1.5em;
