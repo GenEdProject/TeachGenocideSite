@@ -19,7 +19,11 @@ get_header(); ?>
       <?php /* Start the Loop */ ?>
       <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'content', 'search' ); ?>
+        <div class="search_result">
+            <a href=<?php the_permalink(); ?> ><?php the_title(); ?></a>
+            <span><?php the_permalink(); ?></span>
+            <p><?php the_content(); ?></span>
+        </div>
 
       <?php endwhile; ?>
 
