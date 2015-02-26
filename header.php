@@ -24,28 +24,43 @@
 
   <header id="masthead" class="site-header" role="banner">
 
-    <div class="main_banner">
-     <h1 class="site_title">The Genocide Education Project</h1>
-      <img id="logo" src="/wp-content/themes/teachgen/images/GEPLogoBlack-web.png"></img>
+    <div class="main_banner_container"> 
+      <div class="main_banner">
 
-      <div class="social_widgets">
-        <a href='https://www.youtube.com/user/Genocideeducation/featured'>
-          <img src="/wp-content/themes/teachgen/images/YouTube-icon-full_color.png" class="youtube_widget" >
-        </a>
-        <a href='https://www.facebook.com/genedpro'>
-          <img src="/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png">
-        </a>
+        <img id="logo" src="/wp-content/themes/teachgen/images/GEPLogoBlack-web.png"></img>
+        <div class="site_title"> The Genocide Education Project </div>
+
+        <div class="social_widgets">
+          <a href='https://www.youtube.com/user/Genocideeducation/featured'>
+            <img src="/wp-content/themes/teachgen/images/YouTube-icon-full_color.png" class="youtube_widget" >
+          </a>
+          <a href='https://www.facebook.com/genedpro'>
+            <img src="/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png">
+          </a>
+        </div>
+      </div>
     </div>
 
+    <div class="navigation_container"> 
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <!-- <script type="text/javascript" src="\wp-content\themes\teachgen\scripts\sticky_menu.js"></script> -->
+
+        <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
+
+        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+      </nav><!-- #site-navigation -->
     </div>
 
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-      <!-- <script type="text/javascript" src="\wp-content\themes\teachgen\scripts\sticky_menu.js"></script> -->
+    <!-- Banner -->
+    <?php if (has_post_thumbnail( $post->ID )) : ?>
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+    <div class="banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
+    <?php endif; ?>
+        <div class="banner_text">
+            <h1> <?php echo get_the_title(); ?> </h1>
+        </div>
+    </div>    
 
-      <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
-
-      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-    </nav><!-- #site-navigation -->
   </header><!-- #masthead -->
 
   <div id="content" class="site-content">

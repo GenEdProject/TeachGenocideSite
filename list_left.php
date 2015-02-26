@@ -64,56 +64,41 @@ endif;
 
 <!-- Start making the page -->
 
-<!-- Banner -->
-<?php if (has_post_thumbnail( $post->ID )) : ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-<div class="banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
-<?php endif; ?>
-    <div class="banner_text">
-        <h1> <?php echo get_the_title(); ?> </h1>
-        <?php if (strlen($page_content)) { ?>
-            <p> <?php echo $page_content ?> </p>
-        <?php } ?>
-    </div>
-</div>
-
 <!-- Content -->
-<div class="custom_page_padding">
 
-    <!-- Make the list -->
-    <section class="list">
-        <?php foreach ($category_array as $key => $cat) { // for each category?>
-            <?php
-                $args = array(
-                    'posts_per_page' => '-1',
-                    'post_type' => $template_type,
-                    'cat' => $cat[0]->cat_ID,);
-                $currCatItems = new WP_Query( $args );
-                $i = 0;
-                $total = $currCatItems->found_posts;
-            ?>
-            <div class="title_container">
-                <center> <img src="<?php echo z_taxonomy_image_url($cat[0]->cat_ID); ?>" /> </center>
-                <h1> <?php echo $key ?> </h1>
-                <hr class="list_divider">
-            </div>
+<!-- Make the list -->
+<section class="list">
+    <?php foreach ($category_array as $key => $cat) { // for each category?>
+        <?php
+            $args = array(
+                'posts_per_page' => '-1',
+                'post_type' => $template_type,
+                'cat' => $cat[0]->cat_ID,);
+            $currCatItems = new WP_Query( $args );
+            $i = 0;
+            $total = $currCatItems->found_posts;
+        ?>
+        <div class="title_container">
+            <!-- <center> <img src="<?php echo z_taxonomy_image_url($cat[0]->cat_ID); ?>" /> </center> -->
+            <div class="title_text"> <?php echo $key ?> </div>
+            <div class="list_divider"> </div>
+        </div>
 
-            <?php
-            while($i < $total) : $currCatItems->the_post();
-                create_item();
-                if($i != $total - 1)
-                {
-                    create_divider();
-                }
-                $i++;
-            endwhile;
-            ?>
+        <?php
+        while($i < $total) : $currCatItems->the_post();
+            create_item();
+            if($i != $total - 1)
+            {
+                create_divider();
+            }
+            $i++;
+        endwhile;
+        ?>
 
-            <div style="clear: both;"> </div>
-        <?php } ?>
-    </section>
+        <div style="clear: both;"> </div>
+    <?php } ?>
+</section>
 
-</div>
 
 
 <?php
