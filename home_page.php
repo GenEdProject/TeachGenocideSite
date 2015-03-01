@@ -43,34 +43,36 @@ endif;
 <!-- Home Title -->
 <?php if (has_post_thumbnail( $post->ID )) : ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-<div class="home_title_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
+<div class="home_banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
 <?php endif; ?>
-    <div class="title_text">
-        <h1> Learning the Past, Building the Future </h1>
-    </div>
-
-    <div class="press_window">
-        <?php
-        $args = array(
-          'posts_per_page' => '1',
-          'post_type' => 'post',
-        );
-        $home_items = new WP_Query( $args );
-        if( $home_items->have_posts() ) : while( $home_items->have_posts() ) : $home_items->the_post();  ?>
-
-        <div class="press_window_text">
-            <?php echo the_date(); ?> <br>
-            <b> <?php the_title(); ?> </b> <br>
-            <?php the_content( 'Read More' , true ); ?>
+    <div class="home_banner">
+        <div class="title_text">
+            <h1> Learning the Past, <br> Building the Future </h1>
         </div>
 
-        <?php endwhile; endif; ?>
+        <div class="press_window">
+            <?php
+            $args = array(
+              'posts_per_page' => '1',
+              'post_type' => 'post',
+            );
+            $home_items = new WP_Query( $args );
+            if( $home_items->have_posts() ) : while( $home_items->have_posts() ) : $home_items->the_post();  ?>
+
+            <div class="press_window_text">
+                <?php echo the_date(); ?> <br>
+                <b> <?php the_title(); ?> </b> <br>
+                <?php the_content( 'Read More' , true ); ?>
+            </div>
+
+            <?php endwhile; endif; ?>
+        </div>
     </div>
 </div>
 
 <!-- Content -->
 <div class="custom_page_padding">
-    <div style="float: left; width: 600px;">
+    <div class="home_items">
         <div class="home_text_title"> Teaching Resources </div>
         <div class="home_item_window">
             <?php
@@ -82,7 +84,7 @@ endif;
         </div>
     </div>
 
-    <div style="float: right; width=600px;">
+    <div class="home_text">
         <div class="home_text_title"> The Genocide Education Project </div>
         <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
     </div>

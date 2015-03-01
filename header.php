@@ -52,14 +52,15 @@
     </div>
 
     <!-- Banner -->
-    <?php if (has_post_thumbnail( $post->ID )) : ?>
+    <?php if (has_post_thumbnail( $post->ID ) and !is_front_page()) : ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
     <div class="banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
-    <?php endif; ?>
         <div class="banner_text">
             <h1> <?php echo get_the_title(); ?> </h1>
         </div>
-    </div>    
+    </div>
+    <?php endif; ?>
+
 
   </header><!-- #masthead -->
 
