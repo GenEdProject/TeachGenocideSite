@@ -9,6 +9,7 @@ $template_type = get_post_custom_values('template_type');
 $args = array(
   'posts_per_page' => '-1',
   'post_type' => $template_type,
+  'order_by' => 'date',
 );
 $myItems = new WP_Query( $args );
 $i = 0;
@@ -47,13 +48,13 @@ endif;
 <!-- Functions -->
 <?php function create_item() { ?>
     <div class="item_container_left">
-        <b><?php the_title(); ?></b>
-        <p><?php
+        <div class="item_title"> <b><?php the_title(); ?></b> </div>
+        <?php
                if (has_post_thumbnail()) {
                    the_post_thumbnail('thumbnail', array('class' => "item_container_thumb_left"));
                }
                the_content();
-        ?></p>
+        ?>
     </div>
 <?php } ?>
 

@@ -800,6 +800,7 @@ section.list{
   margin-left: auto;
   margin-right: auto;
   width: 960px;
+  overflow: auto;
   /* border-radius: 4px;
   border: 1px solid #ccc; */
 }
@@ -816,9 +817,18 @@ section.list{
 .list .item_container_thumb_left {
   float: left;
   margin-right: 10px;
-  margin-top:   10px;
   height: 128px;
   width:  100px;
+  border: 1px solid #777;
+  float: top;
+}
+
+.list .item_container_thumb_right {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 256px;
+  width:  200px;
   border: 1px solid #777;
 }
 
@@ -853,6 +863,16 @@ section.list{
 .list .title_text {
   margin-top: 16px;
   margin-bottom: 8px;
+}
+
+.list .item_title {
+  margin-bottom: 10px;
+}
+
+.list .item_content {
+  float: left;
+  width: 660px;
+
 }
 
 /* Page */

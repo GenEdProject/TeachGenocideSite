@@ -102,6 +102,14 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                         'taxonomies' => array('category')
                         )
             );
+            register_post_type('posters',
+                    array(
+                        'labels' => array('name' => 'Posters'),
+                        'public' => true,
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail', 'custom-fields'),
+                        'taxonomies' => array('category')
+                        )
+            );
         }
         // Enable support for HTML5 markup.
         add_theme_support( 'html5', array(
