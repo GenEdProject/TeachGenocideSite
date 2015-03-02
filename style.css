@@ -414,7 +414,9 @@ a {
 
 .footer_content {
   color: white;
-  padding-left: 85px;
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 16px;
 }
 
@@ -439,7 +441,6 @@ a {
 
 .footer_content .copyright {
   position: absolute;
-  left: 85px;
   bottom: 20px;
   font-size: 11px;
 }
