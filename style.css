@@ -399,7 +399,7 @@ a {
   color: #000000;
   float: left;
   margin-left: 20px;
-  top: 58px;
+  top: 65px;
 }
 
 .site-footer {
@@ -409,7 +409,7 @@ a {
 }
 
 .site-footer .social_widgets {
-  top: auto;
+  top: 22px;
 }
 
 .footer_content {
@@ -440,15 +440,15 @@ a {
 }
 
 .footer_content .copyright {
-  position: absolute;
-  bottom: 20px;
+  position: relative;
+  bottom: -125px;
   font-size: 11px;
 }
 
 .social_widgets{
   position: relative;
   float: right;
-  top: 85px;
+  top: 82px;
 }
 
 .youtube_widget {
