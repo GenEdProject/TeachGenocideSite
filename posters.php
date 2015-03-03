@@ -32,7 +32,7 @@ endif;
 <?php function create_item() { ?>
     <div class="item_container_left">
         <div class="item_title"> <b><?php the_title(); ?></b> </div>
-        <a href="<?php echo get_post_custom_values('link')[0]; ?>">
+        <a href="<?php echo get_post_custom_values('link'); ?>">
         <?php
                if (has_post_thumbnail()) {
                    the_post_thumbnail('thumbnail', array('class' => "item_container_thumb_right"));
