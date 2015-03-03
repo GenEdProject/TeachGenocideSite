@@ -48,12 +48,12 @@ endif;
 <?php function create_item() { ?>
     <div class="item_container_left">
         <b><?php the_title(); ?></b>
-        <p><?php
+        <?php
                if (has_post_thumbnail()) {
                    the_post_thumbnail('thumbnail', array('class' => "item_container_thumb_left"));
                }
                the_content();
-        ?></p>
+        ?>
     </div>
 <?php } ?>
 

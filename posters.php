@@ -35,7 +35,7 @@ endif;
         <a href="<?php echo get_post_custom_values('link')[0]; ?>">
         <?php
                if (has_post_thumbnail()) {
-                   the_post_thumbnail('thumbnail', array('class' => "item_container_thumb_right"));
+                   the_post_thumbnail('medium', array('class' => "item_container_thumb_right"));
                } 
         ?>
         </a>

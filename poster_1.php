@@ -56,7 +56,7 @@ $page_content = '';
        }, function() {
           jQuery(".scrollable6").stop().animate({ opacity: 1 },300); 
        });
-    })
+    });
 </script>
 
 <!-- Get the content of the page itself -->

@@ -794,7 +794,6 @@ section.list{
 
 .list .item_container_left {
   text-align: left;
-  padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: auto;
@@ -817,8 +816,6 @@ section.list{
 .list .item_container_thumb_left {
   float: left;
   margin-right: 10px;
-  height: 128px;
-  width:  100px;
   border: 1px solid #777;
   float: top;
 }
@@ -827,8 +824,6 @@ section.list{
   float: right;
   margin-right: 10px;
   margin-bottom: 10px;
-  height: 256px;
-  width:  200px;
   border: 1px solid #777;
 }
 
@@ -851,7 +846,7 @@ section.list{
 .list .list_divider{
     width: 960px;
     background-color: #ccc; 
-    height: 1px;
+    height: 2px;
 }
 
 .title_container {
@@ -861,6 +856,7 @@ section.list{
 }
 
 .list .title_text {
+  font-family: roboto;
   margin-top: 16px;
   margin-bottom: 8px;
 }

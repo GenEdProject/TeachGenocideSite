@@ -181,3 +181,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Thumbnail
+set_post_thumbnail_size( 50, 50, false );
