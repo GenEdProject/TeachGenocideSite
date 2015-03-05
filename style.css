@@ -977,6 +977,11 @@ section.list{
   color: #ffffff;
 }
 
+.press_window_text_full {
+  font-size: 14px;
+  padding: 12px;
+}
+
 .press_window_text p {
   padding-top: 4px;
   font-size: 14px;
@@ -1017,6 +1022,15 @@ section.list{
   background-color: #263248;
   border-radius: 5px;
   color: #ffffff;
+}
+
+.home_video {
+  background-color: #263248;
+  width: 853px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
