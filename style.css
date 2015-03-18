@@ -357,7 +357,8 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #444;
+  color: #175576;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -744,6 +745,11 @@ section.list{
   width: 100%
 }
 
+section.list_half{
+  width: 50%;
+  float: left;
+}
+
 .banner_container {
   left: 0px;
   text-align: left;
@@ -855,6 +861,14 @@ section.list{
   font-size: 28px;
 }
 
+.list_half .title_container {
+  padding-left: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  font-size: 28px;
+  color: #175576;
+}
+
 .list .title_text {
   font-family: roboto;
   margin-top: 16px;
@@ -872,8 +886,14 @@ section.list{
 }
 
 /* Page */
-.custom_page_padding {
+.home_page_padding {
   padding-top: 300px;
+}
+
+.custom_page_padding {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  display: inline-block
 }
 
 .custom_page_title {
@@ -910,6 +930,14 @@ section.list{
   text-decoration:none;
 }
 
+.doc_item {
+  margin: 6px;
+  float: top;
+  vertical-align: middle;
+  height: 28px;
+  text-decoration:none;
+}
+
 .home_item span {
   margin-left: 4px;
   float: left;
@@ -929,7 +957,7 @@ section.list{
   border-left: 14px solid rgb(200, 200, 200);
   float: left;
   margin-top: 3px;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .home_banner_container {

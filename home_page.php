@@ -71,7 +71,7 @@ endif;
 </div>
 
 <!-- Content -->
-<div class="custom_page_padding">
+<div class="home_page_padding">
     <div class="home_items">
         <div class="home_text_title"> Teaching Resources </div>
         <div class="home_item_window">
