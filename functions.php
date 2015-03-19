@@ -91,7 +91,8 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Survivor Accounts'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'taxonomies' => array('category')
                         )
             );
             register_post_type('websites',

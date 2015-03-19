@@ -823,7 +823,6 @@ section.list_half{
   float: left;
   margin-right: 10px;
   border: 1px solid #777;
-  float: top;
 }
 
 .list .item_container_thumb_right {
@@ -853,6 +852,16 @@ section.list_half{
     width: 960px;
     background-color: #ccc; 
     height: 2px;
+}
+
+.list .list_image {
+  float: left;
+}
+
+.list .list_text {
+  display: inline-block;
+  width: 830px;
+  float: left;
 }
 
 .title_container {
