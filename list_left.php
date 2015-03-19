@@ -39,7 +39,7 @@ endif;
                }
         ?>
         </div>
-        <div class="list_text" style="width:790px;">
+        <div class="list_text" style="width:700px;">
             <?php the_content(); ?>
         </div>
     </div>
