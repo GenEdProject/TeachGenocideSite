@@ -48,6 +48,10 @@
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
 
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+        <form action="/" class="search_form">
+          <input type="search" name="s" class="search_input" />
+          <input type="submit" value="Search">
+        </form>
       </nav><!-- #site-navigation -->
     </div>
 

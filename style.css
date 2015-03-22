@@ -226,8 +226,6 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #fff;
-  border: 0;
   height: 1px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -735,6 +733,16 @@ section.tile {
   border-right: 9px solid black;
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
+}
+
+.search_form {
+  float: right;
+  position: relative;
+  bottom: 30px;
+}
+
+.search_form .search_input {
+  height: 16px;
 }
 
 .column {

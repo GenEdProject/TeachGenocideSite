@@ -19,10 +19,10 @@ get_header(); ?>
       <?php /* Start the Loop */ ?>
       <?php while ( have_posts() ) : the_post(); ?>
 
+        <hr/>
         <div class="search_result">
-            <a href=<?php the_permalink(); ?> ><?php the_title(); ?></a>
-            <span><?php the_permalink(); ?></span>
-            <p><?php the_content(); ?></span>
+            <a href=<?php the_permalink(); ?> ><h2><?php the_title(); ?></h2></a>
+            <p><?php the_content(); ?></p>
         </div>
 
       <?php endwhile; ?>
