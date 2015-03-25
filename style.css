@@ -151,19 +151,19 @@ h2 {
 h3 {
   font-size: 20px;
   margin-bottom: 1em;
-  clear: both; 
+  clear: both;
 }
 h4 {
   font-size: 16px;
-  clear: both; 
-} 
+  clear: both;
+}
 h5 {
   font-size: 14px;
-  clear: both; 
+  clear: both;
 }
 h6 {
   font-size: 12px;
-  clear: both; 
+  clear: both;
 }
 p {
   margin-bottom: 1.5em;
@@ -848,18 +848,18 @@ section.list_half{
 
 .list .item_divider{
     width: 960px;
-    background-color: #ccc; 
+    background-color: #ccc;
     height: 1px;
 }
 
 .list .item_divider_left{
     width: 960px;
-    background-color: #ccc; 
+    background-color: #ccc;
     height: 1px;
 }
 .list .list_divider{
     width: 960px;
-    background-color: #ccc; 
+    background-color: #ccc;
     height: 2px;
 }
 
@@ -968,8 +968,8 @@ section.list_half{
 }
 
 .arrow_right {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 14px solid rgb(200, 200, 200);
