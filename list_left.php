@@ -29,7 +29,6 @@ endif;
 <!-- Functions -->
 <?php function create_item() { ?>
     <div class="item_container_left">
-        <b><?php the_title(); ?></b>
         <div class="list_image">
         <?php
                if (has_post_thumbnail()) {
@@ -38,6 +37,7 @@ endif;
         ?>
         </div>
         <div class="list_text" style="width:650px;">
+         	<b><?php the_title(); ?></b>
             <?php the_content(); ?>
         </div>
     </div>
