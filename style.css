@@ -900,7 +900,46 @@ section.list_half{
 .list .item_content {
   float: left;
   width: 660px;
+}
 
+.state_educational_requirements h2 {
+  color: #1F4361;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.state_educational_requirements .state_edu_left_column {
+  float: left;
+  width: 460px;
+}
+
+.state_educational_requirements .state_list {
+  display: inline-block;
+  list-style-type: initial;
+  padding-right: 30px;
+}
+
+.state_educational_requirements .first_list {
+  margin-left: 15px;
+}
+
+.state_educational_requirements .state_select_label {
+  padding-right: 5px;
+}
+
+.state_educational_requirements .state_selector {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.state_educational_requirements .state_edu_requirements {
+  background-color: #DDD8CA;
+  float: right;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  width: 460px;
 }
 
 /* Page */
