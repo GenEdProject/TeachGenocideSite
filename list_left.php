@@ -1,10 +1,8 @@
-<?php
+ <?php
 /*
 * Template Name: List Left
 * */
-
 get_header();
-
 $template_type = get_post_custom_values('template_type');
 $args = array(
   'posts_per_page' => '-1',
@@ -39,7 +37,7 @@ endif;
                }
         ?>
         </div>
-        <div class="list_text" style="width: 700px;">
+        <div class="list_text" style="width:650px;">
             <?php the_content(); ?>
         </div>
     </div>
@@ -72,6 +70,5 @@ endif;
 
 <?php
 wp_reset_postdata();
-
 get_sidebar();
 get_footer(); ?>

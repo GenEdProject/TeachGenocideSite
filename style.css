@@ -226,10 +226,9 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #fff;
-  border: 0;
   height: 1px;
-  margin-bottom: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 dt {
   font-weight: bold;
@@ -736,6 +735,16 @@ section.tile {
   border-bottom: 9px solid transparent;
 }
 
+.search_form {
+  float: right;
+  position: relative;
+  bottom: 30px;
+}
+
+.search_form .search_input {
+  height: 16px;
+}
+
 .column {
   width: 50%;
 }
@@ -860,7 +869,7 @@ section.list_half{
 
 .list .list_text {
   display: inline-block;
-  width: 830px;
+  width: 800px;
   float: left;
 }
 
