@@ -1,10 +1,8 @@
-<?php
+ <?php
 /*
 * Template Name: List Left
 * */
-
 get_header();
-
 $template_type = get_post_custom_values('template_type');
 $args = array(
   'posts_per_page' => '-1',
@@ -31,15 +29,15 @@ endif;
 <!-- Functions -->
 <?php function create_item() { ?>
     <div class="item_container_left">
-        <b><?php the_title(); ?></b>
         <div class="list_image">
         <?php
                if (has_post_thumbnail()) {
-                   the_post_thumbnail('medium', array('class' => "item_container_thumb_left"));
+                   the_post_thumbnail('full', array('class' => "item_container_thumb_left"));
                }
         ?>
         </div>
         <div class="list_text" style="width:650px;">
+         	<b><?php the_title(); ?></b>
             <?php the_content(); ?>
         </div>
     </div>
@@ -72,6 +70,5 @@ endif;
 
 <?php
 wp_reset_postdata();
-
 get_sidebar();
 get_footer(); ?>

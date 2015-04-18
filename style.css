@@ -868,7 +868,7 @@ section.list_half{
 }
 
 .list .list_text {
-  display: inline-block;
+  display: inline-block; 
   width: 800px;
   float: left;
 }
