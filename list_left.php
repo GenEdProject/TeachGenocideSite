@@ -33,7 +33,7 @@ endif;
         <div class="list_image">
         <?php
                if (has_post_thumbnail()) {
-                   the_post_thumbnail('medium', array('class' => "item_container_thumb_left"));
+                   the_post_thumbnail('full', array('class' => "item_container_thumb_left"));
                }
         ?>
         </div>
