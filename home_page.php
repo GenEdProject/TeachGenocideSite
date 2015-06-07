@@ -85,7 +85,7 @@ endif;
     </div>
 
     <div class="home_text">
-        <div class="home_text_title"> The Genocide Education Project </div>
+        <div class="home_text_title">The Genocide Education Project</div>
         <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
     </div>
 </div>
