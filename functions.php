@@ -111,6 +111,14 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                         'taxonomies' => array('category')
                         )
             );
+            register_post_type('state_edu_reqs',
+                    array(
+                        'labels' => array('name' => 'State Educational Requirement'),
+                        'public' => true,
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'taxonomies' => array('category')
+                        )
+            );
         }
         // Enable support for HTML5 markup.
         add_theme_support( 'html5', array(
@@ -147,6 +155,7 @@ function teachgen_scripts() {
     wp_enqueue_style( 'teachgen-style', get_stylesheet_uri() );
 
     wp_enqueue_script( 'teachgen-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
+    wp_enqueue_script( 'state_edu_reqs', get_template_directory_uri() . '/js/state_edu_reqs.js', array( 'jquery' ), '20150606', true );
 
     wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array(), '20140409', true );
 

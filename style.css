@@ -939,6 +939,13 @@ section.list_half{
   width: 460px;
 }
 
+.state_educational_requirements .state_edu_details {
+  display: none;
+}
+
+.state_educational_requirements .state_edu_details.California {
+  display: block; 
+}
 /* Page */
 .home_page_padding {
   padding-top: 300px;

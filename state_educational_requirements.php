@@ -37,34 +37,45 @@ get_header(); ?>
 
         <section class="state_selector">
           <span class="state_select_label">Select another state:</span>
-          <select>
+          <select id="state_select">
             <option value="California">California</option>
             <option value="Georgia">Georgia</option>
             <option value="Illinois">Illinois</option>
             <option value="Kansas">Kansas</option>
             <option value="Massachusetts">Massachusetts</option>
             <option value="Minnesota">Minnesota</option>
-            <option value="New Jersey">New Jersey</option>
-            <option value="New York">New York</option>
+            <option value="New_Jersey">New Jersey</option>
+            <option value="New_York">New York</option>
             <option value="Ohio">Ohio</option>
-            <option value="Rhode Island">Rhode Island</option>
+            <option value="Rhode_Island">Rhode Island</option>
             <option value="Virginia">Virginia</option>
           </select>
         </section>
       </div>
+      
       <div class="state_edu_requirements">
-        <p>California History-Social Science Content Standard 10.5.5 requires that students in the public schools:
-        Discuss human rights violations and genocide, including the Ottoman government's actions against Armenian citizens.
-        </p>
+        <?php
+        $args = array(
+            // Change these category SLUGS to suit your use.
+            'post_type' => 'state_edu_reqs',
+            'posts_per_page' => '-1'
+        );
 
-        <p>History-Social Science Framework for California Public Schools:
-        "Within the context of human rights and genocide, students should learn of the Ottoman government's planned mass deportation and systematic annihilation of the Armenian population in 1915. Students should also examine the reactions of other governments, including that of the United States, and world opinion during and after the Armenian genocide. They should examine the effects of the genocide on the remaining Armenian people, who were deprived of their historic homeland, and the ways in which it became a prototype of subsequent genocides."
-        (Framework, p.127)
-        </p>
-
-        <p>"Genocides, such as that perpetrated on the Armenians, already had demonstrated the human capacity for mass murder. The Nazis perfected the social organization of human evil and provided an efficient and frightening model for future despots such as Pol Pot in Cambodia."
-        (Framework, pp.128-129)
-        </p>
+        $i = 0;
+        $edu_reqs = new WP_Query( $args );
+        $total = $edu_reqs->found_posts;
+        while($i < $total) : $edu_reqs->the_post();
+        ?>
+          <div class="state_edu_details <?php echo str_replace(' ', '_', get_the_title()) ?>">
+          <?php
+            the_title();
+            the_content();
+          ?>
+          </div>
+        <?php
+        $i++;
+        endwhile;
+        ?>
       </div>
     </main><!-- #main -->
   </div><!-- #primary -->
