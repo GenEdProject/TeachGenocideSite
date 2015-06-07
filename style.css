@@ -151,19 +151,19 @@ h2 {
 h3 {
   font-size: 20px;
   margin-bottom: 1em;
-  clear: both; 
+  clear: both;
 }
 h4 {
   font-size: 16px;
-  clear: both; 
-} 
+  clear: both;
+}
 h5 {
   font-size: 14px;
-  clear: both; 
+  clear: both;
 }
 h6 {
   font-size: 12px;
-  clear: both; 
+  clear: both;
 }
 p {
   margin-bottom: 1.5em;
@@ -848,18 +848,18 @@ section.list_half{
 
 .list .item_divider{
     width: 960px;
-    background-color: #ccc; 
+    background-color: #ccc;
     height: 1px;
 }
 
 .list .item_divider_left{
     width: 960px;
-    background-color: #ccc; 
+    background-color: #ccc;
     height: 1px;
 }
 .list .list_divider{
     width: 960px;
-    background-color: #ccc; 
+    background-color: #ccc;
     height: 2px;
 }
 
@@ -900,7 +900,46 @@ section.list_half{
 .list .item_content {
   float: left;
   width: 660px;
+}
 
+.state_educational_requirements h2 {
+  color: #1F4361;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.state_educational_requirements .state_edu_left_column {
+  float: left;
+  width: 460px;
+}
+
+.state_educational_requirements .state_list {
+  display: inline-block;
+  list-style-type: initial;
+  padding-right: 30px;
+}
+
+.state_educational_requirements .first_list {
+  margin-left: 15px;
+}
+
+.state_educational_requirements .state_select_label {
+  padding-right: 5px;
+}
+
+.state_educational_requirements .state_selector {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.state_educational_requirements .state_edu_requirements {
+  background-color: #DDD8CA;
+  float: right;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  width: 460px;
 }
 
 /* Page */
@@ -968,8 +1007,8 @@ section.list_half{
 }
 
 .arrow_right {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 14px solid rgb(200, 200, 200);
