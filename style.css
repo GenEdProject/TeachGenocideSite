@@ -611,8 +611,6 @@ li.current_page_parent ul, li.current_page_item ul {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -661,8 +659,6 @@ li.current_page_parent ul, li.current_page_item ul {
   margin-left: auto;
   margin-right: auto;
   width: 990px;
-  margin-top: -25px;
-  /*padding-top: 120px;*/
 }
 .entry-header{
   display: none;
