@@ -66,8 +66,6 @@ endif;
     <div style="clear: both;"> </div>
 </section>
 
-
-
 <?php
 wp_reset_postdata();
 
