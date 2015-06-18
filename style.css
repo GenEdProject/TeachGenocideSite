@@ -368,12 +368,12 @@ a {
 
 .navigation_container {
   width: 100%;
-  background-color: #C43D15;
+  background-color: #9ba966;
 }
 
 .main_banner_container {
   width: 100%;
-  background-color: #E4E0D3;
+  background-color: #ffffff;
   height: 130px;
 }
 
@@ -403,7 +403,7 @@ a {
 }
 
 .site-footer {
-  background-color: #C43D15;
+  background-color: #9ba966;
   height: 200px;
   position: relative;
 }
@@ -655,7 +655,7 @@ li.current_page_parent ul, li.current_page_item ul {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 #content {
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   width: 990px;
@@ -1007,6 +1007,7 @@ section.list_half{
 }
 
 .home_item a {
+  color: #000000;
   text-decoration:none;
 }
 
@@ -1015,7 +1016,7 @@ section.list_half{
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 14px solid rgb(200, 200, 200);
+  border-left: 14px solid #9CA96A;
   float: left;
   margin-top: 3px;
   margin-right: 8px;
@@ -1103,14 +1104,14 @@ section.list_half{
 }
 
 .home_text_title {
-  padding-top: 1px;
+  padding-top: 2px;
   padding-bottom: 1px;
   padding-left: 16px;
   font-size: 20px;
   font-weight: bold;
-  background-color: #263248;
+  background-color: #E0E4D1;
   border-radius: 5px;
-  color: #ffffff;
+  color: #175576;
 }
 
 .home_video {
