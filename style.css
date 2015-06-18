@@ -1043,14 +1043,15 @@ section.list_half{
 
 .home_banner_container .title_text {
   float: left;
-  padding-top: 20px;
+  padding-left: 50px;
+  padding-top: 40px;
   color: #ffffff;
   height: 120px;
-  text-shadow: 1px 1px rgb(0, 0, 0);
+  text-shadow: 3px 3px 3px rgb(100, 100, 100);
 }
 
 .home_banner_container .title_text h1 {
-  font-size: 50px;
+  font-size: 46px;
 }
 
 .press_window {
