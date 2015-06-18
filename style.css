@@ -901,8 +901,8 @@ section.list_half{
 }
 
 .state_educational_requirements h2 {
-  color: #E0E4D1;
-  margin-top: 10px;
+  color: #175576;
+  margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -919,7 +919,7 @@ section.list_half{
 }
 
 .state_educational_requirements .first_list {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .state_educational_requirements .state_select_label {
