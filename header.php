@@ -28,7 +28,7 @@
       <div class="main_banner">
 
         <img id="logo" src="/wp-content/themes/teachgen/images/new_gened_logo.jpg"></img>
-        <div class="site_title"> The Genocide Education Project </div>
+        <div class="site_title"> The Genocide <br> Education Project </div>
 
         <div class="social_widgets">
           <a href='https://www.youtube.com/user/Genocideeducation/featured'>

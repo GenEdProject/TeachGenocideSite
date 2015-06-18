@@ -375,15 +375,15 @@ a {
 .main_banner_container {
   width: 100%;
   background-color: #ffffff;
-  height: 130px;
+  height: 110px;
 }
 
 #logo {
   position: relative;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   float: left;
 }
 
@@ -395,12 +395,13 @@ a {
 
 .site_title {
   position: relative;
-  font-size: 40px;
-  font-family: garamond;
+  font-size: 25px;
+  font-family: arial;
   color: #000000;
   float: left;
+  font-weight: bold;
   margin-left: 20px;
-  top: 65px;
+  top: 20px;
 }
 
 .site-footer {
