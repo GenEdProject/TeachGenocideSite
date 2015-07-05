@@ -27,7 +27,7 @@
     <div class="main_banner_container"> 
       <div class="main_banner">
 
-        <img id="logo" src="/wp-content/themes/teachgen/images/new_gened_logo.jpg"></img>
+        <img id="logo" src="/wp-content/themes/teachgen/images/new_gened_logo.png"></img>
         <div class="site_title"> The Genocide <br> Education Project </div>
 
         <div class="social_widgets">
