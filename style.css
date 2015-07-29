@@ -747,6 +747,7 @@ section.tile {
 
 .search_form .search_btn {
   vertical-align: middle;
+  padding: 5px 10px;
 }
 
 .column {
