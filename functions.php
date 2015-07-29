@@ -68,7 +68,7 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Books'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail', 'custom-fields'),
                         'taxonomies' => array('category')
                         )
             );
@@ -76,7 +76,7 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Videos'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail', 'custom-fields'),
                         'taxonomies' => array('category')
                         )
             );
@@ -84,7 +84,7 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                     array(
                         'labels' => array('name' => 'Teaching Guides'),
                         'public' => true,
-                        'supports' => array('title', 'editor', 'revisions', 'thumbnail')
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail', 'custom-fields')
                         )
             );
             register_post_type('survivor_accounts',
