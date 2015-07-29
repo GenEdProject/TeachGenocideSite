@@ -741,7 +741,12 @@ section.tile {
 }
 
 .search_form .search_input {
+  vertical-align: middle;
   height: 16px;
+}
+
+.search_form .search_btn {
+  vertical-align: middle;
 }
 
 .column {

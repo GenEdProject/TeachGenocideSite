@@ -50,7 +50,7 @@
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
         <form action="/" class="search_form">
           <input type="search" name="s" class="search_input" />
-          <input type="submit" value="Search">
+          <input type="submit" value="Search" class="search_btn">
         </form>
       </nav><!-- #site-navigation -->
     </div>
