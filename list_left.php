@@ -37,7 +37,7 @@ endif;
         ?>
         </div>
         <div class="list_text" style="width:650px;">
-         	<b><?php the_title(); ?></b>
+            <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
         </div>
     </div>

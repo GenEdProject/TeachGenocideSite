@@ -878,6 +878,10 @@ section.list_half{
   float: left;
 }
 
+.list .list_text h2 {
+  margin-bottom: 0px;
+}
+
 .title_container {
   padding: 16px;
   text-align: center;
@@ -894,6 +898,7 @@ section.list_half{
 
 .list .title_text {
   font-family: roboto;
+  font-size: 35px;
   margin-top: 16px;
   margin-bottom: 8px;
 }

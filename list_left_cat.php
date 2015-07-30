@@ -55,7 +55,7 @@ endif;
         ?>
         </div>
         <div class="list_text">
-            <b><?php the_title(); ?></b>
+            <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
         </div>
     </div>
