@@ -58,8 +58,8 @@
     <!-- Banner -->
     <?php if (has_post_thumbnail( $post->ID ) and !is_front_page()) : ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-    <div class="banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
-        <div class="banner_text">
+    <div class="banner_container" style="background-image: url(' <?php if (!is_single()) : echo $image[0]; endif; ?> ')">
+        <div class="banner_text <?php if (is_single()) : echo 'no_banner_image'; endif; ?>">
             <h1> <?php echo get_the_title(); ?> </h1>
         </div>
     </div>
