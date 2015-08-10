@@ -782,6 +782,10 @@ section.list_half{
   height: 120px;
 }
 
+.banner_container .banner_text.no_banner_image {
+  color: inherit;
+}
+
 .banner_container .banner_text h1 {
   font-size: 50px;
 }
