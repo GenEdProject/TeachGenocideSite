@@ -24,7 +24,7 @@
 
   <header id="masthead" class="site-header" role="banner">
 
-    <div class="main_banner_container"> 
+    <div class="main_banner_container">
       <div class="main_banner">
 
         <img id="logo" src="/wp-content/themes/teachgen/images/new_gened_logo.png"></img>
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="navigation_container"> 
+    <div class="navigation_container">
       <nav id="site-navigation" class="main-navigation" role="navigation">
         <!-- <script type="text/javascript" src="\wp-content\themes\teachgen\scripts\sticky_menu.js"></script> -->
 

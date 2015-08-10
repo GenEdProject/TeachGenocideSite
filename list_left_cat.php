@@ -29,12 +29,12 @@ $page_content = '';
                 $category_array[$category_name] = $category;
             }
         }
-    ?>    
+    ?>
 <?php $i++; endwhile;?>
 
 
 <!-- Get the content of the page itself -->
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
         if( '' !== get_post()->post_content ) { ?>
             <div class="custom_page_content">
                 <?php the_content(); ?>
@@ -69,6 +69,7 @@ endif;
 <!-- Start making the page -->
 
 <!-- Content -->
+<div class="custom_page_padding">
 
 <!-- Make the list -->
 <section class="list">
@@ -83,7 +84,6 @@ endif;
             $total = $currCatItems->found_posts;
         ?>
         <div class="title_container">
-            <!-- <center> <img src="<?php echo z_taxonomy_image_url($cat[0]->cat_ID); ?>" /> </center> -->
             <div class="title_text"> <?php echo $key ?> </div>
             <div class="list_divider"> </div>
         </div>
@@ -102,6 +102,8 @@ endif;
         <div style="clear: both;"> </div>
     <?php } ?>
 </section>
+
+</div>
 
 
 

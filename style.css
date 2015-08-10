@@ -814,10 +814,7 @@ section.list_half{
 
 .list .item_container_left {
   text-align: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px;
   width: 960px;
   overflow: auto;
   /* border-radius: 4px;
@@ -859,21 +856,26 @@ section.list_half{
 
 .list .item_divider_left{
     width: 960px;
-    background-color: #ccc;
+    background-color: #444;
     height: 1px;
 }
 .list .list_divider{
     width: 960px;
-    background-color: #ccc;
-    height: 2px;
+    background-color: #444;
+    height: 1px;
 }
 
 .list .list_image {
   float: left;
 }
 
+.list .list_center_image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .list .list_text {
-  display: inline-block; 
+  display: inline-block;
   width: 800px;
   float: left;
 }
@@ -907,7 +909,7 @@ section.list_half{
   margin-bottom: 10px;
 }
 
-.list .item_content {
+.list .tent {
   float: left;
   width: 660px;
 }
@@ -957,7 +959,7 @@ section.list_half{
 }
 
 .state_educational_requirements .state_edu_details.California {
-  display: block; 
+  display: block;
 }
 /* Page */
 .home_page_padding {
@@ -1135,6 +1137,15 @@ section.list_half{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+
+/* Teaching guides */
+
+.teachguide_button {
+  float: top;
+  margin: 5px;
+  font-size: 16px;
+  color: #175576;
 }
 
 /*--------------------------------------------------------------
