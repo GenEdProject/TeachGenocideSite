@@ -1143,7 +1143,7 @@ body.single .banner_text {
 .home_items {
   padding-top: 20px;
   float: left;
-  width: 500px;
+  width: 510px;
 }
 
 .home_item_window {
@@ -1160,6 +1160,10 @@ body.single .banner_text {
   background-color: #E0E4D1;
   border-radius: 5px;
   color: #175576;
+}
+
+.teaching_resources {
+  margin-right: 10px;
 }
 
 .home_video {

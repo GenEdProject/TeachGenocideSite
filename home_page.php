@@ -73,7 +73,7 @@ endif;
 <!-- Content -->
 <div class="home_page_padding">
     <div class="home_items">
-        <div class="home_text_title"> Teaching Resources </div>
+        <div class="home_text_title teaching_resources"> Teaching Resources </div>
         <div class="home_item_window">
             <?php
             while($i < $total) : $myItems->the_post();
