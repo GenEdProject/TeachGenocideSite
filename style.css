@@ -416,6 +416,10 @@ a {
   top: 22px;
 }
 
+.not-found {
+  margin-bottom: 30px;
+}
+
 .footer_content {
   color: white;
   width: 990px;
