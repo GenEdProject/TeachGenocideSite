@@ -792,6 +792,19 @@ section.list_half{
   color: inherit;
 }
 
+body.single .banner_container {
+  height: inherit;
+}
+
+body.single .banner_text > h1 {
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+body.single .banner_text {
+  height: inherit;
+}
+
 .banner_container .banner_text h1 {
   font-size: 50px;
 }
