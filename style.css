@@ -134,7 +134,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -227,10 +227,12 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  height: 1px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+    border: none;
+    min-height: 1px;
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
 }
+
 dt {
   font-weight: bold;
 }
@@ -468,7 +470,7 @@ a {
   width: 990px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #123444;
 }
 .main-navigation ul {
@@ -816,9 +818,13 @@ section.list_half{
   border: 1px solid #ccc; */
 }
 
+.list .item_content {
+  width: 700px;
+  float: left;
+}
+
 .list .item_container_left {
   text-align: left;
-  margin: 10px;
   width: 960px;
   overflow: auto;
   /* border-radius: 4px;
@@ -847,30 +853,30 @@ section.list_half{
   border: 1px solid #777;
 }
 
+.list .item_divider {
+  height: 60px;
+}
+
 .list .column {
   width: 50%;
   margin: auto;
 }
 
-.list .item_divider{
-    width: 960px;
-    background-color: #ccc;
-    height: 1px;
-}
-
-.list .item_divider_left{
-    width: 960px;
+.list .ider {
+    width: 100%;
     background-color: #444;
     height: 1px;
 }
-.list .list_divider{
-    width: 960px;
+.list .list_divider {
+    width: 100%;
     background-color: #444;
     height: 1px;
 }
 
 .list .list_image {
-  float: left;
+  width: 200px;
+  float: right;
+  margin-top: 12px;
 }
 
 .list .list_center_image {
@@ -880,8 +886,12 @@ section.list_half{
 
 .list .list_text {
   display: inline-block;
-  width: 800px;
   float: left;
+  margin-left: 10px;
+}
+
+.list h2 {
+  margin-bottom: 0px;
 }
 
 .list .list_text h2 {
@@ -889,7 +899,8 @@ section.list_half{
 }
 
 .title_container {
-  padding: 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   text-align: center;
   font-size: 28px;
 }
@@ -903,10 +914,10 @@ section.list_half{
 }
 
 .list .title_text {
-  font-family: roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 35px;
   margin-top: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .list .item_title {
@@ -1146,10 +1157,16 @@ section.list_half{
 /* Teaching guides */
 
 .teachguide_button {
-  float: top;
+  float: left;
   margin: 5px;
   font-size: 16px;
   color: #175576;
+}
+
+/* misc */
+
+.clear {
+    clear: both;
 }
 
 /*--------------------------------------------------------------

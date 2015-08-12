@@ -17,17 +17,6 @@ $category_array = array();
 $page_content = '';
 ?>
 
-<!-- Get the content of the page itself -->
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-        if( '' !== get_post()->post_content ) { ?>
-            <div class="custom_page_content">
-                <?php the_content(); ?>
-            </div>
-<?php } endwhile; else:
-    // no posts found
-endif;
-?>
-
 <!-- Functions -->
 <?php function create_item() { ?>
     <div class="item_container_left">
@@ -36,7 +25,7 @@ endif;
         <?php
                if (has_post_thumbnail()) {
                    the_post_thumbnail('medium', array('class' => "item_container_thumb_right"));
-               } 
+               }
         ?>
         </a>
         <div class="item_content"> <?php the_content(); ?> </div>
@@ -50,21 +39,35 @@ endif;
 
 <!-- Start making the page -->
 
-<!-- Make the list -->
-<section class="list">
-    <?php
-    while($i < $total) : $myItems->the_post();
-        create_item();
-        if($i != $total - 1)
-        {
-            create_divider();
-        }
-        $i++;
-    endwhile;
-    ?>
+<!-- Content -->
+<div class="custom_page_padding">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+          if( '' !== get_post()->post_content ) { ?>
+              <div class="custom_page_content">
+                  <?php the_content(); ?>
+              </div>
+  <?php } endwhile; else:
+      // no posts found
+  endif;
+  ?>
 
-    <div style="clear: both;"> </div>
-</section>
+  <!-- Make the list -->
+  <section class="list">
+      <?php
+      while($i < $total) : $myItems->the_post();
+          create_item();
+          if($i != $total - 1)
+          {
+              create_divider();
+          }
+          $i++;
+      endwhile;
+      ?>
+
+      <div style="clear: both;"> </div>
+  </section>
+
+</div>
 
 <?php
 wp_reset_postdata();
