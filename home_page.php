@@ -18,7 +18,7 @@ $page_content = '';
 
 
 <!-- Get the content of the page itself -->
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
         if( '' !== get_post()->post_content ) { ?>
                 <?php $page_content = get_the_content(); ?>
 <?php } endwhile; else:
@@ -72,22 +72,25 @@ endif;
 
 <!-- Content -->
 <div class="home_page_padding">
-    <div class="home_items">
-        <div class="home_text_title teaching_resources"> Teaching Resources </div>
-        <div class="home_item_window">
-            <?php
-            while($i < $total) : $myItems->the_post();
-                create_item();
-                $i++;
-            endwhile;
-            ?>
-        </div>
-    </div>
+  <div class="custom_page_padding">
+      <center> <iframe width="853" height="480" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> </center>
+      <div class="home_items">
+          <div class="home_text_title teaching_resources"> Teaching Resources </div>
+          <div class="home_item_window">
+              <?php
+              while($i < $total) : $myItems->the_post();
+                  create_item();
+                  $i++;
+              endwhile;
+              ?>
+          </div>
+      </div>
 
-    <div class="home_text">
-        <div class="home_text_title">The Genocide Education Project</div>
-        <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
-    </div>
+      <div class="home_text">
+          <div class="home_text_title">The Genocide Education Project</div>
+          <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
+      </div>
+  </div>
 </div>
 
 
