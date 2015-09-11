@@ -73,7 +73,7 @@ endif;
 <!-- Content -->
 <div class="home_page_padding">
   <div class="custom_page_padding">
-      <center> <iframe width="853" height="480" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> </center>
+      <center> <iframe width="990" height="557" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> </center>
       <div class="home_items">
           <div class="home_text_title teaching_resources"> Teaching Resources </div>
           <div class="home_item_window">
