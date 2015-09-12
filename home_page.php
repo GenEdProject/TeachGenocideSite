@@ -89,7 +89,9 @@ endif;
           <div class="home_text_title">The Genocide Education Project</div>
           <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
       </div>
-      <center> <iframe width="990" height="557" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> </center>
+      <div class="custom_page_padding">
+        <iframe width="990" height="557" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
   </div>
 </div>
 
