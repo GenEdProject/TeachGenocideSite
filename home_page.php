@@ -88,6 +88,10 @@ endif;
       <div class="home_text">
           <div class="home_text_title">The Genocide Education Project</div>
           <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
+          <div class="learn_more">
+              <div class="arrow_right"> </div>
+              <span> <a href="http://teachgen.hayg.info/"> Learn more about who we are </a> </span>
+          </div>
       </div>
       <div class="custom_page_padding">
         <iframe width="990" height="557" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>

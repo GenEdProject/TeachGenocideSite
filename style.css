@@ -407,7 +407,7 @@ a {
 }
 
 .site-footer {
-  background-color: #77865b;
+  background-color: #9BAA66;
   height: 200px;
   position: relative;
 }
@@ -1076,8 +1076,8 @@ body.single .banner_text {
   width: 100%;
   height: 300px;
   margin-bottom: 20px;
-  /* background-repeat: no-repeat; */
-  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .home_banner {
@@ -1104,7 +1104,7 @@ body.single .banner_text {
   width: 480px;
   float: right;
   margin-top: 25px;
-  background-color: #1B5575;
+  background-color: #9BAA66;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -1188,6 +1188,13 @@ body.single .banner_text {
 
 .clear {
     clear: both;
+}
+
+.learn_more {
+  position: relative;
+  font-size: 17px;
+  bottom: 20px;
+  margin-left: 20px;
 }
 
 /*--------------------------------------------------------------
