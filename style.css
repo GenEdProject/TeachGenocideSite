@@ -1078,6 +1078,7 @@ body.single .banner_text {
   height: 340px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-color: #6A6A75;
 }
 
 .home_banner {
