@@ -775,7 +775,8 @@ section.list_half{
   text-align: left;
   width: 100%;
   height: 120px;
-  /* background-repeat: no-repeat;  */
+  background-repeat: no-repeat;
+  background-color: #6A6A75;
   background-position: 0% 50%;
 }
 
