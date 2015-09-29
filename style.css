@@ -776,7 +776,7 @@ section.list_half{
   width: 100%;
   height: 120px;
   background-repeat: no-repeat;
-  background-color: #6A6A75;
+  background-color: #ffffff;
   background-position: 0% 50%;
 }
 
@@ -790,6 +790,7 @@ section.list_half{
 }
 
 .banner_container .banner_text.no_banner_image {
+  background-color: #ffffff;
   color: inherit;
 }
 
