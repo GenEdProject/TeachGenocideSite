@@ -270,6 +270,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  margin: 5px;
+  font-size: 16px;
+  color: #175576;
   border: 1px solid #ccc;
   border-color: #ccc #ccc #bbb #ccc;
   border-radius: 3px;
@@ -278,8 +281,6 @@ input[type="submit"] {
   color: rgba(0, 0, 0, .8);
   cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-  font-size: 12px;
-  font-size: 1.2rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -1180,13 +1181,6 @@ body.single .banner_text {
 /* Teaching guides */
 
 .teachguide_button {
-  float: left;
-  margin: 5px;
-  font-size: 16px;
-  color: #175576;
-}
-
-button {
   float: left;
   margin: 5px;
   font-size: 16px;

@@ -26,18 +26,6 @@ $page_content = '';
         </a>
         <?php the_content(); ?>
 
-        <!-- Buttons -->
-        <?php if (get_post_custom_values('download')[0]) { ?>
-          <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_post_custom_values('download')[0] ?>'">
-            Download
-          </button>
-        <?php } ?>
-        <?php if (get_post_custom_values('order')[0]) { ?>
-          <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_post_custom_values('order')[0] ?>'">
-            Order
-          </button>
-        <?php } ?>
-
       </div>
       <div class="list_image">
         <?php
