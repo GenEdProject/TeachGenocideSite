@@ -1186,7 +1186,7 @@ body.single .banner_text {
   color: #175576;
 }
 
-#content input.wpsc_buy_button{
+button {
   float: left;
   margin: 5px;
   font-size: 16px;
