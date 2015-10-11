@@ -36,8 +36,9 @@ get_header(); ?>
             <?php /* The loop */ ?>
             <?php while ( $list_of_posts->have_posts() ) : $list_of_posts->the_post(); ?>
                 <div class="custom_post_container">
+                    <a href="<?php the_permalink(); ?>">
                     <div class="custom_post_title"> <?php the_title();?> </div>
-                    <hr style="margin-bottom:10px; background-color:#000; height:1px; width:50% float:left">
+                    </a>
                     <?php the_content();?>
                 </div>
             <?php endwhile; ?>
