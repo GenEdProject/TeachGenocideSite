@@ -748,7 +748,6 @@ section.tile {
 }
 
 .search_form .search_input {
-  float: left;
   vertical-align: middle;
   height: 14px;
   font-size: 14px;
