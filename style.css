@@ -744,17 +744,21 @@ section.tile {
 .search_form {
   float: right;
   position: relative;
-  bottom: 30px;
+  bottom: 32px;
 }
 
 .search_form .search_input {
+  float: left;
   vertical-align: middle;
-  height: 16px;
+  height: 14px;
+  font-size: 14px;
 }
 
 .search_form .search_btn {
+  color: #fff;
+  float: left;
   vertical-align: middle;
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 
 .column {
