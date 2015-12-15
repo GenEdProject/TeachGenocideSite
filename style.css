@@ -672,6 +672,9 @@ li.current_page_parent ul, li.current_page_item ul {
 .entry-header{
   display: none;
 }
+.type-post > .entry-header{
+  display: block;
+}
 .sticky {
 }
 .hentry {

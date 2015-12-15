@@ -22,12 +22,6 @@
   <?php else : ?>
   <div class="entry-content">
     <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'teachgen' ) ); ?>
-    <?php
-      wp_link_pages( array(
-        'before' => '<div class="page-links">' . __( 'Pages:', 'teachgen' ),
-        'after'  => '</div>',
-      ) );
-    ?>
   </div><!-- .entry-content -->
   <?php endif; ?>
 

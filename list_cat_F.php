@@ -5,7 +5,7 @@
 
 get_header();
 
-$template_type = get_post_custom_values('template_type');
+$template_type = get_post_meta(get_the_ID(), 'template_type', true);
 $args = array(
   'posts_per_page' => '-1',
   'post_type' => $template_type,
@@ -36,9 +36,7 @@ $page_content = '';
 <?php function create_item() { ?>
   <div class="item_container_left">
       <div class="item_content">
-        <a href="<?php echo the_permalink(); ?>">
-          <h2> <?php the_title(); ?></b> </h2>
-        </a>
+        <h2> <?php the_title(); ?></b> </h2>
         <?php the_content(); ?>
        </div>
       <div class="list_image">

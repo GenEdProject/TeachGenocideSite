@@ -12,6 +12,7 @@ if ( ! function_exists( 'teachgen_paging_nav' ) ) :
  * Display navigation to next/previous set of posts when applicable.
  */
 function teachgen_paging_nav() {
+  return;
   // Don't print empty markup if there's only one page.
   if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
     return;
@@ -40,6 +41,7 @@ if ( ! function_exists( 'teachgen_post_nav' ) ) :
  * Display navigation to next/previous post when applicable.
  */
 function teachgen_post_nav() {
+  return;
   // Don't print empty markup if there's nowhere to navigate.
   $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
   $next     = get_adjacent_post( false, '', false );

@@ -18,9 +18,7 @@ $page_content = '';
 <?php function create_item() { ?>
   <div class="item_container_left">
       <div class="item_content">
-        <a href="<?php echo the_permalink(); ?>">
-          <h2> <?php the_title(); ?></b> </h2>
-        </a>
+        <h2> <?php the_title(); ?></b> </h2>
         <?php the_content(); ?>
       </div>
       <div class="list_image">

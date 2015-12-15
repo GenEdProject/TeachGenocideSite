@@ -5,10 +5,9 @@
 
 get_header();
 
-$template_type = get_post_custom_values('template_type');
 $args = array(
   'posts_per_page' => '-1',
-  'post_type' => $template_type,
+  'post_type' => 'teaching_guides',
 );
 $myItems = new WP_Query( $args );
 $i = 0;
@@ -21,9 +20,9 @@ $page_content = '';
 <?php function create_item() { ?>
     <div class="item_container_left">
       <div class="item_content">
-        <a href="<?php echo the_permalink(); ?>">
-          <h2> <?php the_title(); ?></b> </h2>
-        </a>
+	<a href=<?php the_permalink() ?>
+          <h2><b> <?php the_title(); ?></b> </h2>
+	</a>
         <?php the_content(); ?>
 
         <!-- Buttons -->
