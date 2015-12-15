@@ -669,6 +669,9 @@ li.current_page_parent ul, li.current_page_item ul {
   margin-right: auto;
   width: 990px;
 }
+#content ul {
+  list-style: inside;
+}
 .entry-header{
   display: none;
 }
