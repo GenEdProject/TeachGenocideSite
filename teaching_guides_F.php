@@ -20,7 +20,7 @@ $page_content = '';
 <?php function create_item() { ?>
     <div class="item_container_left">
       <div class="item_content">
-	<a href=<?php the_permalink() ?>
+	<a href=<?php the_permalink() ?>>
           <h2><b> <?php the_title(); ?></b> </h2>
 	</a>
         <?php the_content(); ?>

@@ -1197,6 +1197,11 @@ body.single .banner_text {
   color: #175576;
 }
 
+/* Videos */
+#Videos .Videos_title {
+  display: none;
+}
+
 /* misc */
 
 .clear {

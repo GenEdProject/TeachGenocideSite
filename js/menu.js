@@ -50,7 +50,7 @@
     var t = e.target;
     var path = t.getAttribute('href');
     var rerouted = false;
-    rerouted |= parse_and_reroute(path, 'resources', 'videos');
+    rerouted |= parse_and_reroute(path, 'resources', 'teaching-guides');
     rerouted |= parse_and_reroute(path, 'background', 'denial');
     rerouted |= parse_and_reroute(path, 'register', 'for-supporters');
     return !rerouted;

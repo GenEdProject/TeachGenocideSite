@@ -4,7 +4,9 @@
 * */
 
 get_header();
-
+?>
+<div class="custom_page_padding" id="<?php echo get_the_title() ?>">
+<?php
 $template_type = get_post_meta(get_the_ID(), 'template_type', true);
 $args = array(
   'posts_per_page' => '-1',
@@ -57,7 +59,6 @@ $page_content = '';
 <!-- Start making the page -->
 
 <!-- Content -->
-<div class="custom_page_padding">
 
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -83,7 +84,7 @@ $page_content = '';
               $total = $currCatItems->found_posts;
           ?>
           <div class="title_container">
-              <div class="title_text"> <?php echo $key ?> </div>
+              <div class="title_text <?php echo $key?>_title"> <?php echo $key ?> </div>
               <div class="list_divider"> </div>
           </div>
 
