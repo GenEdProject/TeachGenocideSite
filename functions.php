@@ -164,6 +164,7 @@ function teachgen_scripts() {
 
     wp_enqueue_script( 'teachgen-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
     wp_enqueue_script( 'state_edu_reqs', get_template_directory_uri() . '/js/state_edu_reqs.js', array( 'jquery' ), '20150606', true );
+    wp_enqueue_script( 'registration_gate', get_template_directory_uri() . '/js/registration_gate.js', array( 'jquery' ), '20160221', true );
 
     wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array(), '20140409', true );
 

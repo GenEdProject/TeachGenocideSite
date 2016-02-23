@@ -19,9 +19,15 @@
     <?php echo do_shortcode(get_post_custom_values('order')[0]); ?>
   <?php } ?>
   <?php if (get_post_custom_values('download')[0]) { ?>
-    <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_post_custom_values('download')[0] ?>'">
-          Download
-    </button>
+    <?php if (isset($_COOKIE['registered'])) { ?>
+      <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_post_custom_values('download')[0] ?>'">
+        Download
+      </button>
+    <?php } else { ?>
+      <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_page_link(81) ?>'">
+        Register to download
+      </button>
+    <?php } ?>
   <?php } ?>
   <footer class="entry-footer">
     <?php edit_post_link( __( 'Edit', 'teachgen' ), '<span class="edit-link">', '</span>' ); ?>
