@@ -15,6 +15,9 @@
   </div><!-- .entry-content -->
 
   <!-- Buttons -->
+  <?php if (get_post_custom_values('order')[0]) { ?>
+    <?php echo do_shortcode(get_post_custom_values('order')[0]); ?>
+  <?php } ?>
   <?php if (get_post_custom_values('download')[0]) { ?>
     <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_post_custom_values('download')[0] ?>'">
           Download
