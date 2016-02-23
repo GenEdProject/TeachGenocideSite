@@ -119,6 +119,14 @@ if ( ! function_exists( 'teachgen_setup' ) ) :
                         'taxonomies' => array('category')
                         )
             );
+            register_post_type('genocides',
+                    array(
+                        'labels' => array('name' => 'Modern Era Genocides'),
+                        'public' => true,
+                        'supports' => array('title', 'editor', 'revisions', 'thumbnail'),
+                        'taxonomies' => array('category')
+                        )
+            );
         }
         // Enable support for HTML5 markup.
         add_theme_support( 'html5', array(
