@@ -12,7 +12,7 @@
     $(":submit.teachgen_registration_form_submit_btn").on("click", function(e) {
       setTimeout(function() {
         if ($(":contains('Thank you for subscribing! Check your email for the confirmation message.')")) {
-          setCookie("registered", "true", 1000);
+          setCookie("registered", "true", 3000);
         }
       }, 1000); 
     });
