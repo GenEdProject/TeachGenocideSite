@@ -966,6 +966,10 @@ body.single .banner_text {
   font-weight: 700;
 }
 
+.state_educational_requirements table {
+  word-break: break-word;
+}
+
 .state_educational_requirements .state_edu_left_column {
   float: left;
   width: 460px;
