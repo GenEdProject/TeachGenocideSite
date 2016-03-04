@@ -90,7 +90,7 @@ endif;
           <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
           <div class="learn_more">
               <div class="arrow_right"> </div>
-              <span> <b> <a href="http://teachgen.hayg.info/about-us/"> Learn more about who we are </a> </b> </span>
+              <span> <b> <a href="http://genocideeducation.org/about-us/"> Learn more about who we are </a> </b> </span>
           </div>
       </div>
       <div class="custom_page_padding">
