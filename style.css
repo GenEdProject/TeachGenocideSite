@@ -990,7 +990,6 @@ body.single .banner_text {
 }
 
 .state_educational_requirements .state_selector {
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -1117,10 +1116,10 @@ body.single .banner_text {
 }
 
 .press_window {
-  height: 266px;
+  height: 140px;
   width: 480px;
   float: right;
-  margin-top: 25px;
+  margin-top: 50px;
   background-color: #9BAA66;
   border-radius: 5px;
   overflow: hidden;

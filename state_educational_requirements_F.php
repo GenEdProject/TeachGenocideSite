@@ -21,14 +21,10 @@ get_header(); ?>
           <li>Georgia</li>
           <li>Illinois</li>
           <li>Kansas</li>
-        </ul>
-        <ul class="state_list">
           <li>Massachusetts</li>
           <li>Minnesota</li>
           <li>New Jersey</li>
           <li>New York</li>
-        </ul>
-        <ul class="state_list">
           <li>Ohio</li>
           <li>Rhode Island</li>
           <li>Virginia</li>

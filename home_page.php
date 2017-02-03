@@ -60,9 +60,8 @@ endif;
             if( $home_items->have_posts() ) : while( $home_items->have_posts() ) : $home_items->the_post();  ?>
 
             <div class="press_window_text">
-                <?php echo the_date(); ?> <br>
-                <b> <?php the_title(); ?> </b> <br>
-                <?php the_content( 'Read More' , true ); ?>
+		<h1>GenEd News</h1>
+                <b> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </b> <br>
             </div>
 
             <?php endwhile; endif; ?>
