@@ -32,7 +32,7 @@ $page_content = '';
         <?php if (get_post_custom_values('download')[0]) { ?>
           <?php if (isset($_COOKIE['registered'])) { ?>
             <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_post_custom_values('download')[0] ?>'">
-              Download
+              Download for free
             </button>
           <?php } else { ?>
             <button type="button" class="teachguide_button" Onclick="window.location.href='<?php echo get_page_link(81) ?>'">
