@@ -13,52 +13,54 @@ get_header(); ?>
 
       <div class="state_edu_left_column col-sm-6">
         <h2>Curriculum Requirements</h2>
+        <?php
+        $args = array(
+            // Change these category SLUGS to suit your use.
+            'post_type' => 'state_edu_reqs',
+            'posts_per_page' => '-1',
+            'orderby' => 'title',
+            'order' => 'ASC'
+        );
+
+        $i = 0;
+        $edu_reqs = new WP_Query( $args );
+        $total = $edu_reqs->found_posts;
+        ?>
 
         <p>Currently, the following 11 states require the teaching of the Armenian Genocide.  Select a state from the dropdown menu for the complete text.</p>
 
         <ul class="first_list state_list">
-          <li>California</li>
-          <li>Georgia</li>
-          <li>Illinois</li>
-          <li>Kansas</li>
-          <li>Massachusetts</li>
-          <li>Michigan</li>
-          <li>Minnesota</li>
-          <li>New Jersey</li>
-          <li>New York</li>
-          <li>Ohio</li>
-          <li>Rhode Island</li>
-          <li>Virginia</li>
+        <?php
+        while($i < $total) : $edu_reqs->the_post();
+        ?>
+            <li><?php echo get_the_title() ?></li>
+        <?php
+        $i++;
+        endwhile;
+        ?>
           <br>
         </ul>
 
         <section class="state_selector">
           <span class="state_select_label">Select another state:</span>
           <select id="state_select">
-            <option value="California">California</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Illinois">Illinois</option>
-            <option value="Kansas">Kansas</option>
-            <option value="Massachusetts">Massachusetts</option>
-            <option value="Michigan">Michigan</option>
-            <option value="Minnesota">Minnesota</option>
-            <option value="New_Jersey">New Jersey</option>
-            <option value="New_York">New York</option>
-            <option value="Ohio">Ohio</option>
-            <option value="Rhode_Island">Rhode Island</option>
-            <option value="Virginia">Virginia</option>
+            <?php
+            $i = 0;
+            $edu_reqs = new WP_Query( $args );
+            $total = $edu_reqs->found_posts;
+            while($i < $total) : $edu_reqs->the_post();
+            ?>
+                <option value="<?php echo str_replace(' ', '_', get_the_title()) ?>"><?php echo get_the_title() ?></option>
+            <?php
+            $i++;
+            endwhile;
+            ?>
           </select>
         </section>
       </div>
-      
+
       <div class="state_edu_requirements col-sm-6">
         <?php
-        $args = array(
-            // Change these category SLUGS to suit your use.
-            'post_type' => 'state_edu_reqs',
-            'posts_per_page' => '-1'
-        );
-
         $i = 0;
         $edu_reqs = new WP_Query( $args );
         $total = $edu_reqs->found_posts;
