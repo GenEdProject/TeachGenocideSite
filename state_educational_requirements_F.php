@@ -8,10 +8,10 @@
 
 get_header(); ?>
 
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main state_educational_requirements" role="main">
+  <div id="primary" class="content-area row">
+    <main id="main" class="site-main state_educational_requirements col-sm-12 col-md-8" role="main">
 
-      <div class="state_edu_left_column">
+      <div class="state_edu_left_column col-sm-6">
         <h2>Curriculum Requirements</h2>
 
         <p>Currently, the following 11 states require the teaching of the Armenian Genocide.  Select a state from the dropdown menu for the complete text.</p>
@@ -22,6 +22,7 @@ get_header(); ?>
           <li>Illinois</li>
           <li>Kansas</li>
           <li>Massachusetts</li>
+          <li>Michigan</li>
           <li>Minnesota</li>
           <li>New Jersey</li>
           <li>New York</li>
@@ -39,6 +40,7 @@ get_header(); ?>
             <option value="Illinois">Illinois</option>
             <option value="Kansas">Kansas</option>
             <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
             <option value="Minnesota">Minnesota</option>
             <option value="New_Jersey">New Jersey</option>
             <option value="New_York">New York</option>
@@ -49,7 +51,7 @@ get_header(); ?>
         </section>
       </div>
       
-      <div class="state_edu_requirements">
+      <div class="state_edu_requirements col-sm-6">
         <?php
         $args = array(
             // Change these category SLUGS to suit your use.
@@ -78,3 +80,4 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+

@@ -16,12 +16,9 @@ $page_content = '';
 
 <!-- Functions -->
 <?php function create_item() { ?>
-  <div class="item_container_left">
-      <div class="item_content">
-        <h2> <?php the_title(); ?></b> </h2>
-        <?php the_content(); ?>
-      </div>
-      <div class="list_image">
+  <div class="item_container_left col-sm-12 col-md-8">
+     <h2> <?php the_title(); ?></b> </h2>    
+      <div class="list_image col-sm-4">
         <a href="<?php echo get_post_custom_values('link')[0]; ?>">
           <?php
                  if (has_post_thumbnail()) {
@@ -29,6 +26,9 @@ $page_content = '';
                  }
           ?>
         </a>
+      </div>    
+      <div class="item_content col-sm-8">
+        <?php the_content(); ?>
       </div>
   </div>
 <?php } ?>
@@ -42,12 +42,10 @@ $page_content = '';
 <!-- Start making the page -->
 
 <!-- Content -->
-<div class="custom_page_padding">
-
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
           if( '' !== get_post()->post_content ) { ?>
-              <div class="custom_page_content">
-                  <?php the_content(); ?>
+              <div class="row">
+                  <div class="item_container_left col-sm-12 col-md-8"><?php the_content(); ?></div>
               </div>
   <?php } endwhile; else:
       // no posts found
@@ -55,23 +53,19 @@ $page_content = '';
   ?>
 
   <!-- Make the list -->
-  <section class="list">
+  <section class="list row">
           <?php
           while($i < $total) : $myItems->the_post();
               create_item();
-              if($i != $total - 1)
-              {
-                  create_divider();
-              }
               $i++;
           endwhile;
           ?>
           <div style="clear: both;"> </div>
   </section>
 
-</div>
 
 <?php
 wp_reset_postdata();
 get_sidebar();
 get_footer(); ?>
+

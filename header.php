@@ -21,40 +21,33 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-  <div id="selector"></div>
+ <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
 
   <header id="masthead" class="site-header" role="banner">
 
     <div class="main_banner_container">
       <div class="main_banner">
-
-        <img id="logo" src="/wp-content/themes/teachgen/images/new_gened_logo.png"></img>
-        <div class="site_title"> The Genocide <br> Education Project </div>
-
-        <div class="social_widgets">
-          <a href='https://www.youtube.com/user/Genocideeducation/featured'>
-            <img src="/wp-content/themes/teachgen/images/YouTube-icon-full_color.png" class="youtube_widget" >
-          </a>
-          <a href='https://www.facebook.com/genedpro'>
-            <img src="/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png">
-          </a>
-        </div>
+        <?php if(!is_front_page()) _e('<a href="' . site_url() . '"/>'); ?>
+          <img id="logo" src="/wp-content/themes/teachgen/images/new_gened_logo.png"></img>
+          <div class="site_title"> The Genocide <br> Education Project </div>
+        <?php if(!is_front_page()) _e('</a>'); ?>
       </div>
     </div>
 
+
     <div class="navigation_container">
       <nav id="site-navigation" class="main-navigation" role="navigation">
-        <!-- <script type="text/javascript" src="\wp-content\themes\teachgen\scripts\sticky_menu.js"></script> -->
-
-        <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'teachgen' ); ?></a>
-
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-        <form action="/" class="search_form">
-          <div class="search_btn"> Search </div>
-          <input type="search" name="s" class="search_input" />
-        </form>
-      </nav><!-- #site-navigation -->
-    </div>
+        <div class="search_container">
+         <form action="/" class="search_form">
+            <button class="search_btn"></button>
+            <input type="search" name="s" class="search_input" />
+          </form>
+      </div><!--search-->
+           
+      </nav>
+    </div> 
+    <!--/nav container-->
 
     <!-- Banner -->
     <?php if (has_post_thumbnail( $post->ID ) and !is_front_page()) : ?>
@@ -69,4 +62,5 @@
 
   </header><!-- #masthead -->
 
-  <div id="content" class="site-content">
+  <div id="content" class="site-content container-fluid">
+

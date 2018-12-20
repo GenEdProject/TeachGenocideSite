@@ -41,17 +41,13 @@ $page_content = '';
     </div>
 <?php } ?>
 
-<?php function create_divider() { ?>
-    <hr class="item_divider_left">
-<?php } ?>
-
 
 <!-- Start making the page -->
 
 <!-- Make the list -->
-<div class="custom_page_padding">
+<div class="row">
 
-    <section class="list_half">
+    <section class="list_half col-sm-12 col-md-6">
         <?php foreach ($category_array as $key => $cat) { // for each category?>
             <?php
                 $args = array(
@@ -82,14 +78,14 @@ $page_content = '';
     <!-- Get the content of the page itself -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
             if( '' !== get_post()->post_content ) { ?>
-                <div class="custom_page_content" style="float: right; width: 45%;">
+                <div class="custom_page_content col-md-4 d-none d-md-block">
                     <?php the_content(); ?>
                 </div>
     <?php } endwhile; else:
         // no posts found
     endif;
     ?>
-</div>
+</div> <!--row-->
 
 
 
@@ -98,3 +94,4 @@ wp_reset_postdata();
 
 get_sidebar();
 get_footer(); ?>
+

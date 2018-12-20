@@ -9,13 +9,13 @@
 
 get_header(); ?>
 
-  <section id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+  <section id="primary" class="content-area row">
+    <main id="main" class="site-main col-sm-12 col-md-8" role="main">
 
     <?php if ( have_posts() ) : ?>
 
       <header class="page-header">
-        <h1 class="page-title">
+        <h1 class="page-title hello">
           <?php
             if ( is_category() ) :
               single_cat_title();
@@ -103,3 +103,4 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+

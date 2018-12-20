@@ -12,8 +12,8 @@
       <h1 class="entry-title"><?php the_title(); ?></h1>
     </header><!-- .entry-header -->
 
-    <div class="entry-content">
-      <?php the_content(); ?>
+    <div class="entry-content row">
+        <div class="the_content col-sm-12 col-md-8"><?php the_content(); ?></div>
       <?php
         wp_link_pages( array(
           'before' => '<div class="page-links">' . __( 'Pages:', 'teachgen' ),
@@ -24,3 +24,4 @@
     <?php edit_post_link( __( 'Edit', 'teachgen' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
   </article><!-- #post-## -->
 </div>
+

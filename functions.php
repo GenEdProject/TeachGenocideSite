@@ -156,17 +156,64 @@ function teachgen_widgets_init() {
 }
 add_action( 'widgets_init', 'teachgen_widgets_init' );
 
+
+
+function footer_menus() {
+    register_sidebar( array(
+        'name' => __( 'Footer Menus', 'theme-slug' ),
+        'id' => 'footer_half',
+        'description' => __( 'Widgets in this area will be shown in the footer of the site in half width columns.', 'theme-slug' ),
+        'before_widget' => '<div class="footer_content col-sm-6">',
+        'after_widget'  => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'footer_menus' );
+
+
+
+function footer_text() {
+    register_sidebar( array(
+        'name' => __( 'Footer Text', 'theme-slug' ),
+        'id' => 'footer_full',
+        'description' => __( 'Widgets in this area will be shown in the footer of the site in full width columns.', 'theme-slug' ),
+        'before_widget' => '<div class="footer_full col-sm-12">',
+        'after_widget'  => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'footer_text' );
+
+
+
+function homepage_content() {
+    register_sidebar( array(
+        'name' => __( 'Homepage Content', 'theme-slug' ),
+        'id' => 'homepage',
+        'description' => __( 'Widgets in this area will be shown in half-width columns above the page content on the homepage.', 'theme-slug' ),
+        'before_widget' => '<div class="homepage-widget col-sm-12 col-lg-6">',
+        'after_widget'  => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'homepage_content' );
+
+
 /**
  * Enqueue scripts and styles.
  */
 function teachgen_scripts() {
+    
+    //bootstrap from CDN
+    wp_register_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' );
+    wp_enqueue_style('bootstrap');
+    wp_register_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js' );
+    wp_enqueue_script('bootstrap');
+
     wp_enqueue_style( 'teachgen-style', get_stylesheet_uri() );
 
-    wp_enqueue_script( 'teachgen-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
+    //wp_enqueue_script( 'teachgen-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
     wp_enqueue_script( 'state_edu_reqs', get_template_directory_uri() . '/js/state_edu_reqs.js', array( 'jquery' ), '20150606', true );
     wp_enqueue_script( 'registration_gate', get_template_directory_uri() . '/js/registration_gate.js', array( 'jquery' ), '20160221', true );
 
-    wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array(), '20140409', true );
+    //wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js', array(), '20140409', true );
 
     wp_enqueue_script( 'teachgen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -200,3 +247,29 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+*control excerpt length ... put in for press_window on homepage
+*/
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+function youtube_video_filter($content){
+    //<div class="embed-responsive embed-responsive-16by9"></div>
+    $old = array('<iframe', '</iframe');
+    $new = array('<div class="embed-responsive embed-responsive-16by9"><iframe', '</iframe></div>');
+    $content = str_replace($old, $new, $content);
+    return $content;
+}
+
+add_filter( 'the_content', 'youtube_video_filter', 99 );

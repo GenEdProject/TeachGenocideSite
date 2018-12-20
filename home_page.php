@@ -18,13 +18,7 @@ $page_content = '';
 
 
 <!-- Get the content of the page itself -->
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-        if( '' !== get_post()->post_content ) { ?>
-                <?php $page_content = get_the_content(); ?>
-<?php } endwhile; else:
-    // no posts found
-endif;
-?>
+
 
 
  <!-- Get latest press post -->
@@ -43,59 +37,87 @@ endif;
 <!-- Home Title -->
 <?php if (has_post_thumbnail( $post->ID )) : ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-<div class="home_banner_container" style="background-image: url(' <?php echo $image[0]; ?> ')">
+<div class="home_banner_container row" style="background-image: url(' <?php echo $image[0]; ?> ')">
 <?php endif; ?>
-    <div class="home_banner">
-        <div class="title_text">
+    <div class="home_banner col-lg-8 col-sm-12">
+        <div class="title_text col-lg-6 col-sm-12">
             <h1> Learning the Past, <br> Building the Future </h1>
         </div>
 
-        <div class="press_window">
+        <div class="press_window col-lg-6 col-md-12 d-none d-md-block">
             <?php
-            $args = array(
-              'posts_per_page' => '1',
-              'post_type' => 'post',
-            );
-            $home_items = new WP_Query( $args );
-            if( $home_items->have_posts() ) : while( $home_items->have_posts() ) : $home_items->the_post();  ?>
+            $args = $args = array(
+                            'posts_per_page'   => 1,
+                            'offset'           => 0,
+                            'orderby'          => 'date',
+                            'order'            => 'DESC', 
+                            'post_type'        => 'post',
+                            'post_status'      => 'publish',
+                          );
+            $last = get_posts( $args );
 
-            <div class="press_window_text">
-		<h1>GenEd News</h1>
-                <b> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </b> <br>
-            </div>
-
-            <?php endwhile; endif; ?>
+            if(!empty($last)) {
+              foreach ( $last as $post ) : setup_postdata( $post ); 
+                $cats = get_the_category();
+                $title = !in_array('Announcements', $cats) ? '<h1>Recent News</h1>' : '';
+                ?>
+                <div class="press_window_text">
+                  <?php echo $title; ?>
+                  <a href="<?php echo get_the_permalink(); ?>"><h1><?php echo get_the_title(); ?></h1>Read More...</a>
+                  <?php echo the_excerpt();?>
+                </div>
+                <?php
+              endforeach; 
+              wp_reset_postdata();
+            } else {
+              ?>
+              <div class="press_window_text">
+                  <h1>GenEd News</h1>
+                  <b> <a href="/gened-news/">Read our latest news</a> </b> <br>
+              </div>
+              <?php
+            }
+            ?>
         </div>
     </div>
 </div>
+<div class="press_window_mobile col-sm-12 d-md-none" aria-hidden="true">
+  <?php
+    $args = $args = array(
+                    'posts_per_page'   => 1,
+                    'offset'           => 0,
+                    'orderby'          => 'date',
+                    'order'            => 'DESC', 
+                    'post_type'        => 'post',
+                    'post_status'      => 'publish',
+                  );
+    $last = get_posts( $args );
+
+    if(!empty($last)) {
+      foreach ( $last as $post ) : setup_postdata( $post ); 
+        ?>
+        <div class="press_window_text">
+          <a href="<?php echo get_the_permalink(); ?>"><h1><?php echo get_the_title(); ?></h1>Read More...</a>
+          <?php echo the_excerpt();?>
+        </div>
+        <?php
+      endforeach; 
+      wp_reset_postdata();
+    } else {
+      ?>
+      <div class="press_window_text">
+          <h1>GenEd News</h1>
+          <b> <a href="/gened-news/">Read our latest news</a> </b> <br>
+      </div>
+      <?php
+    }
+    ?>
+</div>
 
 <!-- Content -->
-<div class="home_page_padding">
-  <div class="custom_page_padding">
-      <div class="home_items">
-          <div class="home_text_title teaching_resources"> Teaching Resources </div>
-          <div class="home_item_window">
-              <?php
-              while($i < $total) : $myItems->the_post();
-                  create_item();
-                  $i++;
-              endwhile;
-              ?>
-          </div>
-      </div>
-
-      <div class="home_text">
-          <div class="home_text_title">The Genocide Education Project</div>
-          <div class="home_text_window"> <p> <?php echo $page_content ?> </p> </div>
-          <div class="learn_more">
-              <div class="arrow_right"> </div>
-              <span> <b> <a href="http://genocideeducation.org/about-us/"> Learn more about who we are </a> </b> </span>
-          </div>
-      </div>
-      <div class="custom_page_padding">
-        <iframe width="990" height="557" src="https://www.youtube.com/embed/AtdmfOipj0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-  </div>
+<div class="home_page_row row">
+      <div class="home_page_widgets col-sm-8"><?php dynamic_sidebar( 'homepage' ); ?></div>
+      <div class="home_page_content col-sm-8"><?php the_content(); ?></div>
 </div>
 
 
@@ -104,3 +126,4 @@ wp_reset_postdata();
 
 get_sidebar();
 get_footer(); ?>
+

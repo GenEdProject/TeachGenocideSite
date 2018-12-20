@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="item_container_left">
   <header class="entry-header">
     <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -21,7 +21,7 @@
   </div><!-- .entry-summary -->
   <?php else : ?>
   <div class="entry-content">
-    <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'teachgen' ) ); ?>
+    <?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'teachgen' ) ); ?>
   </div><!-- .entry-content -->
   <?php endif; ?>
 
@@ -55,3 +55,4 @@
     <?php edit_post_link( __( 'Edit', 'teachgen' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

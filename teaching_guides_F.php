@@ -18,16 +18,23 @@ $page_content = '';
 
 <!-- Functions -->
 <?php function create_item() { ?>
-    <div class="item_container_left">
-      <div class="item_content">
-	<a href=<?php the_permalink() ?>>
+    <div class="item_container_left col-sm-12 col-md-8">
+        <a href=<?php the_permalink() ?>>
           <h2><b> <?php the_title(); ?></b> </h2>
-	</a>
+         </a>
+       <div class="list_image col-sm-4">
+        <?php
+               if (has_post_thumbnail()) {
+                   the_post_thumbnail('medium', array('class' => "item_container_thumb_right"));
+               }
+        ?>
+      </div>   
+      <div class="item_content col-sm-8">
         <?php the_content(); ?>
 
         <!-- Buttons -->
         <?php if (get_post_custom_values('order')[0]) { ?>
-	  <?php echo do_shortcode(get_post_custom_values('order')[0]); ?>
+    <?php echo do_shortcode(get_post_custom_values('order')[0]); ?>
         <?php } ?>
         <?php if (get_post_custom_values('download')[0]) { ?>
           <?php if (isset($_COOKIE['registered'])) { ?>
@@ -42,30 +49,17 @@ $page_content = '';
         <?php } ?>
 
       </div>
-      <div class="list_image">
-        <?php
-               if (has_post_thumbnail()) {
-                   the_post_thumbnail('medium', array('class' => "item_container_thumb_right"));
-               }
-        ?>
-      </div>
     </div>
-<?php } ?>
-
-<?php function create_divider() { ?>
-    <div class="item_divider"> </div>
 <?php } ?>
 
 
 <!-- Start making the page -->
 
 <!-- Content -->
-<div class="custom_page_padding">
-
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
           if( '' !== get_post()->post_content ) { ?>
-              <div class="custom_page_content">
-                  <?php the_content(); ?>
+              <div class="row">
+                  <div class="col-sm-12 col-md-8"><?php the_content(); ?></div>
               </div>
   <?php } endwhile; else:
       // no posts found
@@ -73,25 +67,19 @@ $page_content = '';
   ?>
 
   <!-- Make the list -->
-  <section class="list">
+  <section class="list row">
       <?php
       while($i < $total) : $myItems->the_post();
           create_item();
-          if($i != $total - 1)
-          {
-              create_divider();
-          }
           $i++;
       endwhile;
       ?>
-
-      <div style="clear: both;"> </div>
   </section>
 
-</div>
 
 <?php
 wp_reset_postdata();
 
 get_sidebar();
 get_footer(); ?>
+

@@ -7,8 +7,8 @@
 
 get_header(); ?>
 
-  <section id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+  <section id="primary" class="content-area row">
+    <main id="main" class="site-main col-sm-12 col-md-8" role="main">
 
     <?php if ( have_posts() ) : ?>
 
@@ -22,7 +22,7 @@ get_header(); ?>
         <hr/>
         <div class="search_result">
             <a href=<?php the_permalink(); ?> ><h2><?php the_title(); ?></h2></a>
-            <p><?php the_content(); ?></p>
+            <p><?php the_excerpt(); ?></p>
         </div>
 
       <?php endwhile; ?>
@@ -40,3 +40,4 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+

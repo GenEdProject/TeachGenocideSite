@@ -5,13 +5,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="entry-header">
-    <b><h1 class="entry-title"><?php the_title(); ?></h1></b>
+  <header class="entry-header row">
+    <b><h1 class="entry-title col-sm-12 col-md-8"><?php the_title(); ?></h1></b>
 
   </header><!-- .entry-header -->
 
-  <div class="entry-content">
-    <?php the_content(); ?>
+  <div class="entry-content row">
+        <div class="the_content col-sm-12 col-md-8"><?php the_content(); ?></div>
+      <?php
+        wp_link_pages( array(
+          'before' => '<div class="page-links">' . __( 'Pages:', 'teachgen' ),
+          'after'  => '</div>',
+        ) );
+      ?>
   </div><!-- .entry-content -->
 
   <!-- Buttons -->
@@ -33,3 +39,4 @@
     <?php edit_post_link( __( 'Edit', 'teachgen' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

@@ -120,6 +120,7 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
+  color: #175576;
 }
 a img {
   border: 0;
@@ -369,6 +370,7 @@ a {
 --------------------------------------------------------------*/
 
 /* HEADER */
+#top_nav { background-color: #661b00; }
 
 .navigation_container {
   width: 100%;
@@ -411,7 +413,10 @@ a {
   background-color: #9BAA66;
   height: 200px;
   position: relative;
+  margin-top: 30px;
 }
+
+.site-footer .footer-columns { margin: auto auto; }
 
 .site-footer .social_widgets {
   top: 22px;
@@ -427,6 +432,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 16px;
+  float: left;
 }
 
 .footer_content  a {
@@ -448,25 +454,26 @@ a {
   margin-bottom: 7px;
 }
 
-.footer_content .copyright {
+.site-footer .copyright {
   position: relative;
-  bottom: -125px;
+  padding: 0;
   font-size: 11px;
+  color: #fff;
 }
 
 .social_widgets{
-  position: relative;
-  float: right;
-  top: 62px;
+  height: 29px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.social_widgets > a { 
+  float: left; 
+  text-decoration: none;
 }
 
 .youtube_widget {
   height: 29px;
   width: 29px;
-}
-
-.social_widgets a {
-  text-decoration: none;
 }
 
 .main-navigation {
@@ -476,7 +483,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   font-family: 'Open Sans', sans-serif;
-  background-color: #123444;
+  background-color: #aa2d00;
 }
 .main-navigation ul {
   list-style: none;
@@ -561,6 +568,97 @@ li.current_page_parent ul, li.current_page_item ul {
   text-align: right;
   width: 50%;
 }
+
+
+#mega-menu-wrap-primary { 
+  display: inline-block !important;
+  margin: auto auto !important; 
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link { 
+  font-size: 18px; 
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover {
+  text-decoration: underline;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
+  padding: 8px !important;
+}
+
+@media (max-width: 720px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-column {
+    padding-top: 0;
+    padding-bottom: 0;
+  } 
+  #mega-menu-wrap-primary #mega-menu-primary {
+    padding-bottom: 50px !important;
+  }
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(5),
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(6) {
+    float: left;
+  display: inline-block;
+  clear: none;
+  margin-bottom: 10px;
+  }
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(5) { 
+  width: 50px; 
+  height: 32px;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(5):hover {
+  background-color: transparent;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(5) > a {
+  background-image: url('https://genocideeducation.org/wp-content/themes/teachgen/images/YouTube-icon-full_color.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 32px !important;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(5) > a:hover {
+  background-image: url('https://genocideeducation.org/wp-content/themes/teachgen/images/YouTube-icon-full_color.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 32px !important;
+  background-color: #aa2d00 !important;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(6) { 
+  width: 32px; 
+  height: 32px;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(6):hover {
+  background-color: transparent;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(6) > a {
+  background-image: url('https://genocideeducation.org/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 32px !important;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item:nth-child(6) > a:hover {
+  background-image: url('https://genocideeducation.org/wp-content/themes/teachgen/images/FB-f-Logo__blue_29.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 32px !important;
+  background-color: #aa2d00 !important;
+}
+
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -667,7 +765,6 @@ li.current_page_parent ul, li.current_page_item ul {
   background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
-  width: 990px;
 }
 #content ul {
   list-style: inside;
@@ -696,6 +793,11 @@ li.current_page_parent ul, li.current_page_item ul {
 .entry-summary {
   margin: 1.5em 0 0;
 }
+
+.single #content header.entry-header { margin: 25px auto; }
+
+#content .entry-content .the_content { margin: auto auto; }
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -747,17 +849,26 @@ section.tile {
   border-bottom: 9px solid transparent;
 }
 
-.search_form {
-  float: right;
-  position: relative;
-  bottom: 32px;
+.search_container { 
+  display: inline-block; 
+  margin-top: 5px;
 }
 
+@media (max-width: 720px){
+  #mega-menu-wrap-primary { width: 100%; }
+  .search-container {
+    margin-top: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 275px;
+  }
+}
+
+.search_form { margin: auto auto; }
+
 .search_form .search_input {
-  vertical-align: middle;
-  height: 14px;
   font-size: 14px;
-  margin: 0 0 -2px 0;
+  height: 22px;
 }
 
 .search_form .search_btn {
@@ -765,7 +876,15 @@ section.tile {
   float: left;
   vertical-align: middle;
   padding: 4px 10px;
+  background: url("https://genocideeducation.org/wp-content/themes/teachgen/images/search.png") no-repeat center #eee;
+  width: 25px;
+  height: 30px;
+  background-size: 25px 25px;
+  border-radius: 3px; 
+  margin: 0; 
 }
+
+.search #main { margin: 25px auto; }
 
 .column {
   width: 50%;
@@ -773,12 +892,8 @@ section.tile {
 
 /* List */
 section.list{
-  width: 100%
-}
-
-section.list_half{
-  width: 50%;
-  float: left;
+  width: 100%;
+  margin: auto auto;
 }
 
 .banner_container {
@@ -849,16 +964,17 @@ body.single .banner_text {
 }
 
 .list .item_content {
-  width: 700px;
   float: left;
 }
 
-.list .item_container_left {
-  text-align: left;
+.list .item_container_left, .item_container_left {
+  /*text-align: left;
   width: 960px;
-  overflow: auto;
+  overflow: auto;*/
   /* border-radius: 4px;
   border: 1px solid #ccc; */
+  margin: 25px auto;
+  display: inline-block;
 }
 
 
@@ -904,9 +1020,7 @@ body.single .banner_text {
 }
 
 .list .list_image {
-  width: 200px;
-  float: right;
-  margin-top: 12px;
+  float: left;
 }
 
 .list .list_center_image {
@@ -921,7 +1035,7 @@ body.single .banner_text {
 }
 
 .list h2 {
-  margin-bottom: 0px;
+  margin: 25px auto;
 }
 
 .list .list_text h2 {
@@ -970,9 +1084,10 @@ body.single .banner_text {
   word-break: break-word;
 }
 
+.state_educational_requirements { margin: auto auto; }
+
 .state_educational_requirements .state_edu_left_column {
   float: left;
-  width: 460px;
 }
 
 .state_educational_requirements .state_list {
@@ -995,11 +1110,8 @@ body.single .banner_text {
 
 .state_educational_requirements .state_edu_requirements {
   background-color: #DDD8CA;
-  float: right;
+  float: left;
   padding: 10px;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  width: 460px;
 }
 
 .state_educational_requirements .state_edu_details {
@@ -1010,14 +1122,11 @@ body.single .banner_text {
   display: block;
 }
 /* Page */
-.home_page_padding {
-  padding-top: 330px;
-}
+.home_page_widgets { margin: 20px auto; }
 
-.custom_page_padding {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  display: inline-block
+.home_page_widgets > .homepage-widget { float: left; }
+@media (max-width: 960px){
+  .home_page_widgets > .homepage-widget { margin: 10px auto; }
 }
 
 .custom_page_title {
@@ -1058,7 +1167,6 @@ body.single .banner_text {
   margin: 6px;
   float: top;
   vertical-align: middle;
-  height: 28px;
   text-decoration:none;
 }
 
@@ -1074,7 +1182,28 @@ body.single .banner_text {
   text-decoration:none;
 }
 
-.arrow_right {
+.home_page_row .home_page_widgets .homepage-widget .menu-teaching-resources-container ul#menu-teaching-resources {
+  list-style-type: none;
+}
+
+.home_page_row .home_page_widgets .homepage-widget .menu-teaching-resources-container ul#menu-teaching-resources li.menu-item a,
+.pageofposts .home_page_content .archive_annuals li a {
+  color: #000;
+  font-size: 19px;
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+}
+@media (min-width: 1200px) {
+  .home_page_row .home_page_widgets .homepage-widget .menu-teaching-resources-container ul#menu-teaching-resources li.menu-item a {
+    width: 50%;
+  }
+}
+
+.arrow_right,
+.home_page_row .home_page_widgets .homepage-widget .menu-teaching-resources-container ul#menu-teaching-resources li.menu-item a:before,
+.pageofposts .home_page_content .archive_annuals li a:before
+ {
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
@@ -1083,46 +1212,43 @@ body.single .banner_text {
   float: left;
   margin-top: 3px;
   margin-right: 8px;
+  content: '';
 }
 
 .home_banner_container {
-  position: absolute;
-  left: 0px;
-  text-align: left;
-  width: 100%;
-  height: 340px;
+  max-height: 400px;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #fff;
+  background-size: cover;
+  min-height: 400px;
+  background-position: center center;
 }
 
 .home_banner {
-  width: 990px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto auto;
 }
 
 .home_banner_container .title_text {
   float: left;
-  padding-left: 50px;
-  padding-top: 40px;
   color: #ffffff;
-  height: 120px;
-  text-shadow: -1px 2px 0 rgba(0, 0, 0, 0.4);
 }
 
 .home_banner_container .title_text h1 {
   font-size: 46px;
 }
+@media (max-width: 768px) {
+  .home_banner_container .title_text h1 {
+    font-size: 38px;
+  }
+}
 
 .press_window {
-  height: 140px;
-  width: 480px;
-  float: right;
-  margin-top: 50px;
   background-color: #9BAA66;
   border-radius: 5px;
-  overflow: hidden;
+  float: left;
+}
+
+.press_window a:hover {
+  color: #175576;
 }
 
 .press_window_text {
@@ -1136,13 +1262,24 @@ body.single .banner_text {
   padding: 12px;
 }
 
+.press_window_text h1 { 
+  margin-bottom: 0; 
+  font-size: 1.75em;
+}
+
 .press_window_text p {
   padding-top: 4px;
   font-size: 14px;
+  margin-bottom: 0;
 }
 
-.press_window_text b {
-  font-size: 16px;
+.press_window_mobile a:hover, .press_window_mobile a:active { color: #175576; }
+.press_window_mobile {
+  border-bottom: solid 5px #9BAA66;
+}
+
+.press_window_mobile .press_window_text {
+  color: #000;
 }
 
 .home_text{
@@ -1167,7 +1304,8 @@ body.single .banner_text {
   padding: 16px;
 }
 
-.home_text_title {
+.home_page_row .home_page_widgets .homepage-widget h2.widgettitle,
+.pageofposts .home_page_content .archive_annuals h4 {
   padding-top: 2px;
   padding-bottom: 1px;
   padding-left: 16px;
@@ -1177,6 +1315,8 @@ body.single .banner_text {
   border-radius: 5px;
   color: #175576;
 }
+
+.home_page_row .home_page_widgets .textwidget p { padding: 0 16px; }
 
 .teaching_resources {
   margin-right: 10px;
@@ -1191,6 +1331,27 @@ body.single .banner_text {
   margin-top: 20px;
 }
 
+.home_page_content { margin: auto auto; }
+
+.home_page_content > div { float: left; }
+
+.pageofposts .home_page_content { margin: 25px auto; }
+
+.pageofposts .home_page_content .post_archive.row { margin-bottom: 50px; }
+
+.pageofposts .home_page_content .post_archive.row .date { font-weight: bold; }
+
+.pageofposts .home_page_content .archive_annuals { padding: 0; }
+
+.pageofposts .home_page_content .archive_annuals li { list-style-type: none; }
+
+.pageofposts nav.prev-next-posts div {
+  float: left;
+  background-color: #E0E4D1;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
 /* Teaching guides */
 
 .teachguide_button {
@@ -1200,10 +1361,28 @@ body.single .banner_text {
   color: #175576;
 }
 
+/* Survivor Accounts */
+.page-template-list_F #content { margin: 25px auto auto; }
+.page-template-list_F #content .list .list_image { float: left; }
+
+/* Documents */
+.page-template-documents section.list_half,
+.page-template-documents div.custom-page-content {
+  margin: 0 auto;
+}
+
+/* Books */ 
+.page-template-list_cat_F #content { margin: 25px auto auto; }
+.page-template-list_cat_F .the_content { margin: auto auto; }
+
 /* Videos */
 #Videos .Videos_title {
   display: none;
 }
+
+/* State Ed Requirements */ 
+.page-template-state_educational_requirements_F #content { margin: 25px auto auto; }
+
 
 /* misc */
 
@@ -1225,6 +1404,12 @@ body.single .banner_text {
 .archive .format-aside .entry-title {
   display: none;
 }
+
+.archive #content { margin: 25px auto; }
+.archive #content #main { margin: auto auto; }
+.archive article { margin: 25px auto; }
+
+#content .entry-header .entry-title { margin: auto auto; }
 
 /*--------------------------------------------------------------
 10.3 Comments
@@ -1299,3 +1484,4 @@ iframe,
 object {
   max-width: 100%;
 }
+
