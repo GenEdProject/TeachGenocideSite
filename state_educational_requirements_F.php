@@ -27,7 +27,7 @@ get_header(); ?>
         $total = $edu_reqs->found_posts;
         ?>
 
-        <p>Currently, the following 11 states require the teaching of the Armenian Genocide.  Select a state from the dropdown menu for the complete text.</p>
+        <p>Among the numerous states that require instruction on genocide, the following specifically note the Armenian Genocide as a primary example. Select a state from the dropdown menu below the list.</p>
 
         <ul class="first_list state_list">
         <?php
